@@ -10,8 +10,38 @@ Static site for Baseline Labs app landing pages, privacy policies, and terms.
 | Ieltify landing | https://baselinelabsio.github.io/ieltify/ |
 | Ieltify privacy | https://baselinelabsio.github.io/ieltify/privacy.html |
 | Ieltify terms | https://baselinelabsio.github.io/ieltify/terms.html |
+| Account deletion | https://baselinelabsio.github.io/ieltify/request-account-deletion/ |
 
 Use the **privacy** and **terms** URLs in Google OAuth consent screen and Play Console.
+
+## Account deletion form — env via config.js
+
+The page loads env through:
+
+```html
+<script src="config.js"></script>
+<script src="app.js"></script>
+```
+
+`app.js` reads `window.APP_CONFIG.API_URL` (never hardcodes the backend).
+
+### Production (GitHub Pages)
+
+1. Repo **Settings → Secrets and variables → Actions → Variables**
+2. Add variable: `API_URL` = `https://ieltify.eyratech.com` (no trailing slash)
+3. On each deploy, the workflow writes `ieltify/request-account-deletion/config.js` from that variable
+
+`config.js` is gitignored so the live URL is not committed.
+
+### Local testing
+
+```bash
+cd ieltify/request-account-deletion
+cp config.example.js config.js
+# edit API_URL if needed, then open index.html
+```
+
+Your Nest backend must allow CORS from `https://baselinelabsio.github.io` (see `CORS_ALLOWED_ORIGINS` in `backend/.env.template`).
 
 ## Deploy to `baselinelabsio/baselinelabsio.github.io`
 
