@@ -32,7 +32,7 @@
     statusBox.textContent = 'Submitting your request...';
 
     try {
-      const response = await fetch(`${apiBaseUrl}/api/account-deletion/request`, {
+      const response = await fetch(`${apiBaseUrl}/account-deletion/request`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
