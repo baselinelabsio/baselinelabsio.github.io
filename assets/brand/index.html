@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baseline Labs — brand assets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B2437; --brand:#105085; --brand-2:#1E98CC;
+    --mute-l:#7C8B99; --mute-d:#7E97AC; --hair:#E2EAF1; --dark:#0B2437;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+  .wrap{max-width:1060px;margin:0 auto;padding:clamp(2rem,5vw,4rem) clamp(1.1rem,4vw,2rem)}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand)}
+  h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin:.5rem 0 .4rem}
+  h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;margin:2.8rem 0 .9rem;letter-spacing:-.01em}
+  p.lead{color:#5A6B7B;max-width:60ch;margin:0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .cell{border:1px solid var(--hair);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;align-items:center;gap:.9rem;min-height:150px;justify-content:center}
+  .cell.dk{background:var(--dark);border-color:var(--dark)}
+  .cell img{max-width:100%;height:auto}
+  .tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mute-l);text-transform:uppercase}
+  .cell.dk .tag{color:var(--mute-d)}
+  table{width:100%;border-collapse:collapse;margin-top:.6rem;font-size:.9rem}
+  th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid var(--hair);vertical-align:top}
+  th{font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute-l)}
+  code{font-family:'Space Mono',monospace;font-size:.82rem;background:#F4F8FC;padding:.15rem .4rem;border-radius:5px;color:var(--brand)}
+  .sizes{display:flex;align-items:flex-end;gap:1.4rem;flex-wrap:wrap}
+  .sizes figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+  .swatch{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.5rem}
+  .sw{border:1px solid var(--hair);border-radius:10px;overflow:hidden;width:132px}
+  .sw i{display:block;height:52px}
+  .sw span{display:block;font-family:'Space Mono',monospace;font-size:10.5px;padding:.45rem .6rem;color:#5A6B7B}
+  /* typing demo */
+  .demo{border:1px solid var(--hair);border-radius:14px;padding:2.2rem 1.6rem;display:flex;justify-content:center}
+  .demo.dk{background:var(--dark);border-color:var(--dark)}
+  .type{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(1.3rem,3.4vw,2rem);display:inline-flex;align-items:center;gap:.55em;white-space:nowrap}
+  .type .tile{width:1.5em;height:1.5em;flex:none}
+  .type .txt{overflow:hidden;display:inline-block;vertical-align:bottom;
+    width:13ch;animation:tw 7s steps(13,end) infinite}
+  .type .cur{display:inline-block;width:.62em;height:1.05em;background:var(--brand-2);margin-left:.06em;animation:blink 1s step-end infinite}
+  .lt .b{color:var(--ink)} .lt .u{color:var(--brand)} .lt .l{color:var(--mute-l)}
+  .dk2 .b{color:#fff}     .dk2 .u{color:var(--brand-2)} .dk2 .l{color:var(--mute-d)}
+  @keyframes tw{0%{width:0}45%{width:13ch}80%{width:13ch}100%{width:0}}
+  @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){
+    .type .txt{animation:none;width:13ch}
+    .type .cur{animation:none}
+  }
+  footer{margin-top:3.5rem;padding-top:1.4rem;border-top:1px solid var(--hair);color:var(--mute-l);font-size:.86rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Brand assets</span>
+  <h1>Baseline Labs — logo kit</h1>
+  <p class="lead">Option 4: a <code>&gt;_</code> terminal-prompt tile with the <code>baseline_labs</code> wordmark set in Space Mono Bold. Every asset has a light-background and dark-background variant, on a transparent canvas.</p>
+
+  <h2>1 · Icon only</h2>
+  <div class="grid">
+    <div class="cell"><img src="icon-light.svg" width="96" height="96" alt="Baseline Labs icon, light theme"><span class="tag">icon-light.svg · on light</span></div>
+    <div class="cell dk"><img src="icon-dark.svg" width="96" height="96" alt="Baseline Labs icon, dark theme"><span class="tag">icon-dark.svg · on dark</span></div>
+  </div>
+
+  <h2>2 · Wordmark only</h2>
+  <div class="grid">
+    <div class="cell"><img src="wordmark-light.svg" style="width:320px" alt="baseline_labs wordmark, light theme"><span class="tag">wordmark-light.svg</span></div>
+    <div class="cell dk"><img src="wordmark-dark.svg" style="width:320px" alt="baseline_labs wordmark, dark theme"><span class="tag">wordmark-dark.svg</span></div>
+  </div>
+
+  <h2>3 · Horizontal lockup</h2>
+  <div class="grid">
+    <div class="cell"><img src="lockup-light.svg" style="width:380px" alt="Baseline Labs horizontal lockup, light theme"><span class="tag">lockup-light.svg</span></div>
+    <div class="cell dk"><img src="lockup-dark.svg" style="width:380px" alt="Baseline Labs horizontal lockup, dark theme"><span class="tag">lockup-dark.svg</span></div>
+  </div>
+
+  <h2>4 · Stacked lockup — icon above, wordmark centred</h2>
+  <div class="grid">
+    <div class="cell"><img src="lockup-stacked-light.svg" style="width:260px" alt="Baseline Labs stacked lockup, light theme"><span class="tag">lockup-stacked-light.svg</span></div>
+    <div class="cell dk"><img src="lockup-stacked-dark.svg" style="width:260px" alt="Baseline Labs stacked lockup, dark theme"><span class="tag">lockup-stacked-dark.svg</span></div>
+  </div>
+
+  <h2>5 · Icon at export sizes (PNG, transparent)</h2>
+  <div class="cell" style="align-items:flex-start">
+    <div class="sizes">
+      <figure><img src="icon-light-128.png" width="128" height="128" alt=""><figcaption class="tag">128</figcaption></figure>
+      <figure><img src="icon-light-64.png" width="64" height="64" alt=""><figcaption class="tag">64</figcaption></figure>
+      <figure><img src="icon-light-32.png" width="32" height="32" alt=""><figcaption class="tag">32</figcaption></figure>
+    </div>
+    <span class="tag">512 · 256 · 128 · 64 · 32 available in both themes</span>
+  </div>
+
+  <h2>6 · Typing animation</h2>
+  <p class="lead">For the landing page — the wordmark types itself out with a blinking cursor. Not for the nav bar, where the static lockup is used.</p>
+  <div class="grid" style="margin-top:.9rem">
+    <div class="demo">
+      <span class="type lt">
+        <img class="tile" src="icon-light.svg" alt="">
+        <span class="txt"><span class="b">baseline</span><span class="u">_</span><span class="l">labs</span></span><span class="cur"></span>
+      </span>
+    </div>
+    <div class="demo dk">
+      <span class="type dk2">
+        <img class="tile" src="icon-dark.svg" alt="">
+        <span class="txt"><span class="b">baseline</span><span class="u">_</span><span class="l">labs</span></span><span class="cur"></span>
+      </span>
+    </div>
+  </div>
+
+  <h2>7 · Where each variant goes</h2>
+  <table>
+    <tr><th>Use</th><th>Asset</th><th>Notes</th></tr>
+    <tr><td>Site header</td><td><code>lockup-light.svg</code></td><td>Horizontal, on the white/frosted bar</td></tr>
+    <tr><td>Landing hero</td><td>Live text + <code>icon-light.svg</code></td><td>Typing animation — live text stays crisp and animatable</td></tr>
+    <tr><td>Dark panels</td><td><code>lockup-dark.svg</code></td><td>Featured-project panel, dark CTA bands</td></tr>
+    <tr><td>Favicon</td><td><code>icon-light-32.png</code></td><td>Also 64 for retina tabs</td></tr>
+    <tr><td>App / PWA icon</td><td><code>icon-light-512.png</code></td><td>512 and 256 for stores and manifests</td></tr>
+    <tr><td>Social / OG image</td><td><code>lockup-stacked-light@2x.png</code></td><td>Centred stack reads well in a square-ish crop</td></tr>
+    <tr><td>Print / large format</td><td>any <code>.svg</code></td><td>Vector, text already outlined</td></tr>
+  </table>
+
+  <h2>8 · Colour</h2>
+  <div class="swatch">
+    <div class="sw"><i style="background:#0B2437"></i><span>#0B2437 ink</span></div>
+    <div class="sw"><i style="background:#105085"></i><span>#105085 brand</span></div>
+    <div class="sw"><i style="background:#1E98CC"></i><span>#1E98CC accent</span></div>
+    <div class="sw"><i style="background:#7C8B99"></i><span>#7C8B99 mute</span></div>
+  </div>
+
+  <footer>
+    All files live in <code>/assets/brand/</code>. SVG wordmarks have their text converted to outlines, so they render identically without Space Mono installed. PNGs are transparent. “light” = for use on light backgrounds; “dark” = for use on dark backgrounds.
+  </footer>
+</div>
+</body>
+</html>

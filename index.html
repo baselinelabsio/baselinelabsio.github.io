@@ -3,45 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseline Labs</title>
-  <meta name="description" content="Baseline Labs builds mobile apps for learning and productivity.">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <title>Baseline Labs — App studio for focused learning</title>
+  <meta name="description" content="Baseline Labs is an independent app studio building practical mobile apps for focused learning and practice. Our current project is IELTIFY, an IELTS prep app.">
+  <link rel="icon" href="assets/brand/icon-light-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/icon-light-256.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css?v=16">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="site-header-inner">
-      <a class="brand" href="/">Baseline Labs</a>
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="Baseline Labs home">
+        <img src="assets/brand/lockup-light.svg" alt="Baseline Labs" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+        <span class="brand-fallback" style="display:none">Baseline Labs</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#project">Our work</a></li>
+          <li><a href="#studio">Studio</a></li>
+          <li><a href="ieltify/">IELTIFY</a></li>
+          <li><a href="mailto:baselinelabs.io@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn--primary btn--sm" href="mailto:baselinelabs.io@gmail.com">Work with us</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main class="page-wrap">
+  <main>
+    <!-- Hero: the studio -->
     <section class="hero">
-      <h1>Baseline Labs</h1>
-      <p class="lead">Mobile apps for focused learning and practice.</p>
+      <div class="shell">
+        <div class="hero-center">
+          <span class="hero-type" role="img" aria-label="baseline_labs">
+            <img class="hero-type-icon" src="assets/brand/icon-light.svg" alt="" aria-hidden="true" width="48" height="48">
+            <span class="hero-type-text" aria-hidden="true"><span class="b">baseline</span><span class="u">_</span><span class="l">labs</span></span>
+            <span class="hero-type-cursor" aria-hidden="true"></span>
+          </span>
+          <h1>We build mobile apps for <span style="color:var(--primary)">focused learning</span>.</h1>
+          <p class="lead">Baseline Labs is a small studio that turns everyday practice into real progress — crafting apps that are calm to use, honest with feedback, and built to reach a goal.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#project">See our work</a>
+            <a class="btn btn--ghost" href="mailto:baselinelabs.io@gmail.com">Get in touch</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card-grid">
-      <article class="app-card">
-        <h2>IELTIFY - IELTS Training App</h2>
-        <p class="app-meta">IELTS training app with practice tests, AI-assisted feedback, and progress tracking.</p>
-        <div class="app-links">
-          <a class="btn" href="ieltify/">View app</a>
-          <a href="ieltify/privacy.html">Privacy</a>
-          <a href="ieltify/terms.html">Terms</a>
+    <!-- Featured project: IELTIFY (expanding dark showcase) -->
+    <section class="showcase" id="project" aria-labelledby="project-title">
+      <div class="showcase-sticky">
+      <div class="showcase-panel">
+        <div class="showcase-inner">
+          <div class="showcase-body">
+            <!-- Left: static brand lockup, then one feature at a time -->
+            <div class="showcase-left">
+              <div class="showcase-brand">
+                <img class="app-icon" src="ieltify/ieltify_icon.png" alt="" aria-hidden="true" width="82" height="82">
+                <span class="eyebrow eyebrow--dark">Featured project</span>
+                <h2 id="project-title">IELTIFY — a complete IELTS coach in your pocket</h2>
+              </div>
+
+              <div class="sc-list">
+                <div class="sc-item is-active" role="tabpanel"
+                  data-shot="ieltify/app_screenshots/Screenshot_2026-07-17-18-09-21-721_com.baselinelabs.ieltify.jpg"
+                  data-alt="IELTIFY free trial screen showing 1,200 credits"
+                  data-caption="1,200 trial credits, no card needed">
+                  <span class="sc-num">01 / 05</span>
+                  <span class="sc-title">Start free with 1,200 credits</span>
+                  <span class="sc-desc">Your first month is free, no card asked — enough for real practice across every module.</span>
+                </div>
+
+                <div class="sc-item" role="tabpanel"
+                  data-shot="ieltify/app_screenshots/Screenshot_2026-07-17-18-09-00-873_com.baselinelabs.ieltify.jpg"
+                  data-alt="Choosing a target band score between 5.0 and 9.0 in IELTIFY"
+                  data-caption="Target bands from 5.0 to 9.0">
+                  <span class="sc-num">02 / 05</span>
+                  <span class="sc-title">Built around your target band</span>
+                  <span class="sc-desc">Pick your band and test date, and every result is measured against that goal.</span>
+                </div>
+
+                <div class="sc-item" role="tabpanel"
+                  data-shot="ieltify/app_screenshots/Screenshot_2026-07-17-18-12-15-246_com.baselinelabs.ieltify.jpg"
+                  data-alt="IELTIFY listening tests list"
+                  data-caption="New practice tests added regularly">
+                  <span class="sc-num">03 / 05</span>
+                  <span class="sc-title">A test library that keeps growing</span>
+                  <span class="sc-desc">Timed tests in every skill, graded Easy to Hard, with new ones added all the time.</span>
+                </div>
+
+                <div class="sc-item" role="tabpanel"
+                  data-shot="ieltify/app_screenshots/Screenshot_2026-07-17-18-16-43-362_com.baselinelabs.ieltify.jpg"
+                  data-alt="IELTIFY listening test in progress with timer, audio player and questions"
+                  data-caption="Timed sections with audio played once">
+                  <span class="sc-num">04 / 05</span>
+                  <span class="sc-title">Real exam conditions</span>
+                  <span class="sc-desc">A running clock, audio played once, and the real question formats.</span>
+                </div>
+
+                <div class="sc-item" role="tabpanel"
+                  data-shot="ieltify/app_screenshots/Screenshot_2026-07-17-18-19-57-253_com.baselinelabs.ieltify.jpg"
+                  data-alt="IELTIFY speaking test showing the three-part format and timing"
+                  data-caption="Three-part speaking tests, 11–14 minutes">
+                  <span class="sc-num">05 / 05</span>
+                  <span class="sc-title">Speaking in the real format</span>
+                  <span class="sc-desc">Interview, long turn and discussion — recorded and scored against the band criteria.</span>
+                </div>
+              </div>
+
+              <div class="sc-dots" role="tablist" aria-label="IELTIFY features">
+                <button class="sc-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Start free with 1,200 credits"></button>
+                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Built around your target band"></button>
+                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="A test library that keeps growing"></button>
+                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Real exam conditions"></button>
+                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Speaking in the real format"></button>
+              </div>
+
+              <div class="showcase-cta">
+                <a class="btn-play btn-play--light" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener" aria-label="Get IELTIFY on Google Play">
+                  <img class="bp-icon" src="images/google-play.png" alt="" aria-hidden="true" width="24" height="24">
+                  <span class="bp-lines"><span class="bp-small">Get it on</span><span class="bp-big">Google Play</span></span>
+                </a>
+                <a class="btn btn--light" href="ieltify/">Explore IELTIFY</a>
+              </div>
+            </div>
+
+            <!-- Right: changing screenshot -->
+            <div class="sc-media">
+              <div class="phone">
+                <div class="phone-screen">
+                  <img src="ieltify/app_screenshots/Screenshot_2026-07-17-18-09-21-721_com.baselinelabs.ieltify.jpg" alt="IELTIFY free trial screen showing 1,200 credits" width="1080" height="2460">
+                </div>
+              </div>
+              <p class="sc-caption">1,200 trial credits, no card needed</p>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
+      </div>
+    </section>
+
+    <!-- Studio principles -->
+    <section class="section" id="studio">
+      <div class="shell">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">How we build</span>
+          <h2>A studio obsessed with the details that help people learn.</h2>
+          <p>We keep our surface area small and our craft high. Every app we ship follows the same principles.</p>
+        </div>
+
+        <div class="skills-grid reveal" style="margin-top:3rem">
+          <div class="skill-card">
+            <span class="icon" style="background:var(--listening)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h2v-7H5a7 7 0 0 1 14 0h-2v7h2a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9Z"/></svg>
+            </span>
+            <h4>Real over flashy</h4>
+            <p>Timed sections, authentic content and honest scoring — practice that mirrors the real thing.</p>
+          </div>
+          <div class="skill-card">
+            <span class="icon" style="background:var(--speaking)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10a7 7 0 0 1-14 0M12 17v4"/></svg>
+            </span>
+            <h4>Feedback that teaches</h4>
+            <p>AI that doesn't just grade — it shows people the specific next step to improve.</p>
+          </div>
+          <div class="skill-card">
+            <span class="icon" style="background:var(--reading)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h5v18H5a2 2 0 0 1-2-2Z"/><path d="M21 5a2 2 0 0 0-2-2h-5v18h5a2 2 0 0 0 2-2Z"/></svg>
+            </span>
+            <h4>Built around a goal</h4>
+            <p>Set a target, get a path. Our apps shape themselves around what each person actually needs.</p>
+          </div>
+          <div class="skill-card">
+            <span class="icon" style="background:var(--writing)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </span>
+            <h4>Fair by default</h4>
+            <p>Generous free trials and transparent pricing — no dark patterns between people and practice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section--tight">
+      <div class="shell">
+        <div class="cta-band reveal">
+          <h2>Have an app worth building?</h2>
+          <p>We partner on focused learning and productivity apps — or you can try what we're building right now.</p>
+          <div class="hero-actions">
+            <a class="btn btn--light" href="mailto:baselinelabs.io@gmail.com">Start a conversation</a>
+            <a class="btn-play btn-play--light" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener" aria-label="Get IELTIFY on Google Play">
+              <img class="bp-icon" src="images/google-play.png" alt="" aria-hidden="true" width="24" height="24">
+              <span class="bp-lines"><span class="bp-small">Get it on</span><span class="bp-big">Google Play</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="site-footer-inner">
-      <p>Contact: <a href="mailto:baselinelabs.io@gmail.com">baselinelabs.io@gmail.com</a></p>
-      <p>&copy; <span id="year"></span> Baseline Labs. All rights reserved.</p>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Baseline Labs home">
+            <img src="assets/brand/lockup-light.svg" alt="Baseline Labs" style="height:28px" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+            <span class="brand-fallback" style="display:none">Baseline Labs</span>
+          </a>
+          <p>An independent app studio building focused learning apps. Made for people who want to get better, faster.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Work</h5>
+          <ul>
+            <li><a href="ieltify/">IELTIFY</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener">Get on Google Play</a></li>
+            <li><a href="#studio">The studio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="mailto:baselinelabs.io@gmail.com">Contact</a></li>
+            <li><a href="ieltify/privacy.html">Privacy Policy</a></li>
+            <li><a href="ieltify/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Baseline Labs. All rights reserved.</p>
+        <p><a href="mailto:baselinelabs.io@gmail.com">baselinelabs.io@gmail.com</a></p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/main.js?v=13" defer></script>
 </body>
 </html>

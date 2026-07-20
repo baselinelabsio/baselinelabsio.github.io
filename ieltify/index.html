@@ -3,50 +3,392 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IELTIFY - IELTS Training App</title>
-  <meta name="description" content="IELTIFY - IELTS Training App helps you prepare for IELTS with practice tests, speaking evaluation, and personalized recommendations.">
-  <link rel="stylesheet" href="../assets/css/site.css">
+  <title>IELTIFY — IELTS practice tests with AI feedback | Baseline Labs</title>
+  <meta name="description" content="IELTIFY is an IELTS preparation app with full practice tests for Listening, Reading, Writing and Speaking, AI feedback scored against the real band criteria, and a plan built around your target band and test date.">
+  <link rel="icon" href="ieltify_icon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css?v=16">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="site-header-inner">
-      <a class="brand" href="../">Baseline Labs</a>
+    <div class="shell nav">
+      <a class="brand" href="../" aria-label="Baseline Labs home">
+        <img src="../assets/brand/lockup-light.svg" alt="Baseline Labs" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+        <span class="brand-fallback" style="display:none">Baseline Labs</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#modules">Modules</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#credits">Credits</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener">Get the app</a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main class="page-wrap">
-    <p class="breadcrumb"><a href="../">Baseline Labs</a> / IELTIFY - IELTS Training App</p>
+  <main>
+    <div class="shell breadcrumb-bar">
+      <p class="breadcrumb"><a href="../">Baseline Labs</a> <span>/</span> IELTIFY</p>
+    </div>
 
-    <section class="app-layout">
-      <div class="screenshot" aria-hidden="true">
-        App screenshot<br>coming soon
-      </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="shell">
+        <div class="app-hero">
+          <div class="app-hero-copy">
+            <span class="app-mark">
+              <span class="mark"><img src="ieltify_icon.png" alt="" aria-hidden="true" width="54" height="54"></span>
+              <span class="mark-text">IELTIFY<small>IELTS preparation app</small></span>
+            </span>
 
-      <div>
-        <h1>IELTIFY - IELTS Training App</h1>
-        <p class="lead">IELTS training app with full practice tests, AI-assisted speaking and writing feedback, and progress tracking.</p>
+            <h1>Everything you need to hit your <span style="color:var(--primary)">target band</span>.</h1>
+            <p class="lead">Full practice tests for all four skills, AI feedback scored against the real band criteria, and a study plan shaped around your test date — in one Android app.</p>
 
-        <div class="panel" style="margin-top: 1.5rem;">
-          <p><strong>Package:</strong> com.baselinelabs.ieltify</p>
-          <p><strong>Contact:</strong> <a href="mailto:baselinelabs.io@gmail.com">baselinelabs.io@gmail.com</a></p>
-          <div class="app-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="request-account-deletion/">Request account deletion</a>
+            <div class="hero-actions">
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener" aria-label="Get IELTIFY on Google Play">
+                <img class="bp-icon" src="../images/google-play.png" alt="" aria-hidden="true" width="24" height="24">
+                <span class="bp-lines"><span class="bp-small">Get it on</span><span class="bp-big">Google Play</span></span>
+              </a>
+              <a class="btn btn--ghost" href="#features">See what's inside</a>
+            </div>
+
+            <p class="app-note">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                1,200 free trial credits
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                No card needed
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                Academic &amp; General Training
+              </span>
+            </p>
+          </div>
+
+          <div class="app-hero-media">
+            <div class="phone-stage">
+              <div class="phone">
+                <div class="phone-screen">
+                  <img src="app_screenshots/Screenshot_2026-07-17-18-09-21-721_com.baselinelabs.ieltify.jpg" alt="IELTIFY welcome screen showing 1,200 free trial credits" width="1080" height="2460">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Stats -->
+    <section class="section--tight">
+      <div class="shell">
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="num">4</div>
+            <div class="label">Skills covered</div>
+          </div>
+          <div class="stat">
+            <div class="num">40+</div>
+            <div class="label">Practice tests and counting</div>
+          </div>
+          <div class="stat">
+            <div class="num">1,200</div>
+            <div class="label">Trial credits</div>
+          </div>
+          <div class="stat">
+            <div class="num">30</div>
+            <div class="label">Days free access</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules -->
+    <section class="section" id="modules">
+      <div class="shell">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">The four modules</span>
+          <h2>Practise every part of the exam.</h2>
+          <p>Full timed tests in every module, structured exactly like the real thing — and the library keeps growing, with new tests added regularly. Take them one at a time, or sit a complete test end to end.</p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-card">
+            <span class="icon" style="background:var(--listening)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h2v-7H5a7 7 0 0 1 14 0h-2v7h2a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9Z"/></svg>
+            </span>
+            <h4>Listening</h4>
+            <p>Four sections with authentic audio, played once — just like exam conditions.</p>
+            <div class="meta">4 sections · 40 min</div>
+            <span class="credit-pill">10 credits</span>
+          </div>
+
+          <div class="skill-card">
+            <span class="icon" style="background:var(--reading)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h5v18H5a2 2 0 0 1-2-2Z"/><path d="M21 5a2 2 0 0 0-2-2h-5v18h5a2 2 0 0 0 2-2Z"/></svg>
+            </span>
+            <h4>Reading</h4>
+            <p>Three long passages from books, journals and newspapers with 40 questions.</p>
+            <div class="meta">3 sections · 60 min</div>
+            <span class="credit-pill">10 credits</span>
+          </div>
+
+          <div class="skill-card">
+            <span class="icon" style="background:var(--writing)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </span>
+            <h4>Writing</h4>
+            <p>Task 1 data description and a Task 2 essay, both scored on the band criteria.</p>
+            <div class="meta">2 tasks · 60 min</div>
+            <span class="credit-pill">20 credits</span>
+          </div>
+
+          <div class="skill-card">
+            <span class="icon" style="background:var(--speaking)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10a7 7 0 0 1-14 0M12 17v4"/></svg>
+            </span>
+            <h4>Speaking</h4>
+            <p>Three parts — interview, long turn and discussion — recorded and scored.</p>
+            <div class="meta">3 parts · 11–14 min</div>
+            <span class="credit-pill">40 credits</span>
+          </div>
+        </div>
+
+        <p class="reveal" style="text-align:center;margin-top:2rem;color:var(--muted)">
+          Prefer the full experience? A complete test covers all four modules in about 2h 45m for <strong style="color:var(--primary)">80 credits</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Inside the app</span>
+          <h2>Built to move your band score, not just fill time.</h2>
+        </div>
+
+        <div style="margin-top:clamp(3rem,6vw,5rem)">
+          <!-- 1 -->
+          <div class="feature reveal">
+            <div class="feature-copy">
+              <span class="eyebrow">Your plan</span>
+              <h3>Tell it your goal, and practice reshapes around you.</h3>
+              <p>Pick Academic or General Training, your current level, the band you're aiming for and the date you sit the test. Everything after that is measured against that target.</p>
+              <ul class="feature-points">
+                <li><span class="tick">✓</span> Target bands from 5.0 to 9.0</li>
+                <li><span class="tick">✓</span> Test date countdown built in</li>
+                <li><span class="tick">✓</span> Change your goal any time from your profile</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="phone">
+                <div class="phone-screen">
+                  <img src="app_screenshots/Screenshot_2026-07-17-18-09-00-873_com.baselinelabs.ieltify.jpg" alt="Choosing a target band score in IELTIFY" loading="lazy" width="1080" height="2460">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="feature feature--flip reveal">
+            <div class="feature-copy">
+              <span class="eyebrow">Real conditions</span>
+              <h3>Practice that behaves like the real exam.</h3>
+              <p>Timed sections, a running clock, authentic question formats and audio you hear only once. Sitting the real test should feel like something you've already done.</p>
+              <ul class="feature-points">
+                <li><span class="tick">✓</span> Section-by-section timers</li>
+                <li><span class="tick">✓</span> Note completion, matching, multiple choice and more</li>
+                <li><span class="tick">✓</span> Difficulty labelled Easy, Medium or Hard</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="phone">
+                <div class="phone-screen">
+                  <img src="app_screenshots/Screenshot_2026-07-17-18-16-43-362_com.baselinelabs.ieltify.jpg" alt="A listening test in progress in IELTIFY" loading="lazy" width="1080" height="2460">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="feature reveal">
+            <div class="feature-copy">
+              <span class="eyebrow">Speaking</span>
+              <h3>The full three-part speaking test, recorded in the app.</h3>
+              <p>Interview, long turn and discussion — the same structure and timing as the real exam. You record each answer, and AI scores it against the criteria that actually decide your band.</p>
+              <ul class="feature-points">
+                <li><span class="tick">✓</span> Fluency, vocabulary, grammar and pronunciation</li>
+                <li><span class="tick">✓</span> Full three-part format with prep time</li>
+                <li><span class="tick">✓</span> Retake any part as often as you like</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="phone">
+                <div class="phone-screen">
+                  <img src="app_screenshots/Screenshot_2026-07-17-18-19-57-253_com.baselinelabs.ieltify.jpg" alt="Speaking test details in IELTIFY" loading="lazy" width="1080" height="2460">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="feature feature--flip reveal">
+            <div class="feature-copy">
+              <span class="eyebrow">Writing</span>
+              <h3>Both writing tasks, under exam timing.</h3>
+              <p>Task 1 data description and a Task 2 essay in 60 minutes, exactly as the exam sets them. Each submission comes back with a band-referenced breakdown across the four writing criteria.</p>
+              <ul class="feature-points">
+                <li><span class="tick">✓</span> Task 1 from 150 words, Task 2 from 250</li>
+                <li><span class="tick">✓</span> Feedback tied to the four writing criteria</li>
+                <li><span class="tick">✓</span> Specific rewrites, not vague advice</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <div class="phone">
+                <div class="phone-screen">
+                  <img src="app_screenshots/Screenshot_2026-07-17-18-22-30-236_com.baselinelabs.ieltify.jpg" alt="Writing test details in IELTIFY" loading="lazy" width="1080" height="2460">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="shell">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>From install to your first scored test in minutes.</h2>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step">
+            <h4>Set your target</h4>
+            <p>Choose your test type, current level, target band and test date. Setup takes about a minute.</p>
+          </div>
+          <div class="step">
+            <h4>Sit a practice test</h4>
+            <p>Pick a module or a full test and work through it under real exam timing.</p>
+          </div>
+          <div class="step">
+            <h4>Act on the feedback</h4>
+            <p>See where your band sits, what cost you marks, and exactly what to practise next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credits / free trial -->
+    <section class="section" id="credits">
+      <div class="shell">
+        <div class="trial reveal">
+          <div>
+            <span class="eyebrow eyebrow--dark">Free trial</span>
+            <h2>Start with 1,200 credits, free.</h2>
+            <p>Your first month includes 1,200 trial credits and doesn't ask for a card. After that you move to the Free plan with 100 credits every month — mix and match across modules however your prep needs.</p>
+            <div class="hero-actions" style="justify-content:flex-start">
+              <a class="btn-play btn-play--light" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener" aria-label="Get IELTIFY on Google Play">
+                <img class="bp-icon" src="../images/google-play.png" alt="" aria-hidden="true" width="24" height="24">
+                <span class="bp-lines"><span class="bp-small">Get it on</span><span class="bp-big">Google Play</span></span>
+              </a>
+            </div>
+
+            <p class="app-note app-note--dark">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                No card needed
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                Free plan continues after the trial
+              </span>
+              <span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                Academic &amp; General Training
+              </span>
+            </p>
+          </div>
+
+          <div>
+            <p style="margin-bottom:1rem;color:rgba(255,255,255,.8);font-size:.95rem">1,200 credits is roughly any one of these:</p>
+            <div class="credit-grid">
+              <div class="credit-tile">
+                <div class="big">120</div>
+                <div class="cap">Listening or Reading tests</div>
+              </div>
+              <div class="credit-tile">
+                <div class="big">60</div>
+                <div class="cap">Writing tests</div>
+              </div>
+              <div class="credit-tile">
+                <div class="big">30</div>
+                <div class="cap">Speaking tests</div>
+              </div>
+              <div class="credit-tile">
+                <div class="big">15</div>
+                <div class="cap">Full tests</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="site-footer-inner">
-      <p>&copy; <span id="year"></span> Baseline Labs. All rights reserved.</p>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../" aria-label="Baseline Labs home">
+            <img src="../assets/brand/lockup-light.svg" alt="Baseline Labs" style="height:28px" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+            <span class="brand-fallback" style="display:none">Baseline Labs</span>
+          </a>
+          <p>IELTIFY is built by Baseline Labs, an independent app studio making focused learning apps.</p>
+        </div>
+        <div class="footer-col">
+          <h5>App</h5>
+          <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener">Get on Google Play</a></li>
+            <li><a href="#modules">Modules</a></li>
+            <li><a href="#credits">Credits &amp; trial</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="request-account-deletion/">Request account deletion</a></li>
+            <li><a href="mailto:baselinelabs.io@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Baseline Labs. All rights reserved.</p>
+        <p>com.baselinelabs.ieltify</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="../assets/js/main.js?v=9" defer></script>
 </body>
 </html>
