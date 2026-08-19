@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baseline Labs — Logo Lab</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fira+Code:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#105085;
+    --brand-2:#1E98CC;
+    --ink:#0B2437;
+    --tint:#EAF4FB;
+    --dark-surface:#0B2437;
+    --page-mute:#5A6B7A;
+    --hair:#E3E9EF;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{max-width:100%;overflow-x:hidden;}
+  body{
+    margin:0;
+    background:#fff;
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:15px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:1080px;margin:0 auto;padding:56px 24px 96px;}
+
+  /* ---------- page chrome (deliberately quiet) ---------- */
+  .masthead{border-bottom:1px solid var(--hair);padding-bottom:28px;margin-bottom:56px;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--brand);margin:0 0 10px;
+  }
+  h1{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:clamp(24px,4vw,32px);font-weight:700;letter-spacing:-.02em;
+    margin:0 0 12px;
+  }
+  .lede{margin:0;max-width:64ch;color:var(--page-mute);}
+  .lede strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- option card ---------- */
+  .opt{
+    padding-top:44px;margin-top:44px;border-top:1px solid var(--hair);
+    /* defaults, overridden per option */
+    --fg-l:var(--ink);   --accent-l:var(--brand);  --mute-l:#7C8B99;
+    --fg-d:#FFFFFF;      --accent-d:var(--brand-2);--mute-d:#7E97AC;
+    --logo-size:clamp(17px,3.4vw,30px);
+  }
+  .opt:first-of-type{border-top:0;margin-top:0;padding-top:0;}
+
+  .opt-head{margin-bottom:22px;}
+  .opt-no{
+    font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;
+    letter-spacing:.1em;color:var(--brand);
+  }
+  .opt-font{
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;
+    letter-spacing:-.01em;margin:2px 0 4px;
+  }
+  .opt-why{margin:0;color:var(--page-mute);font-size:14px;max-width:70ch;}
+  .tag{
+    display:inline-block;margin-left:8px;vertical-align:2px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--page-mute);
+    border:1px solid var(--hair);border-radius:999px;padding:2px 8px;
+  }
+
+  /* ---------- light / dark panels ---------- */
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:720px){ .panels{grid-template-columns:1fr;} }
+
+  .panel{
+    border-radius:14px;padding:34px 22px;
+    min-height:132px;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .panel.light{background:#fff;border:1px solid var(--hair);--fg:var(--fg-l);--accent:var(--accent-l);--mute:var(--mute-l);}
+  .panel.dark{background:var(--dark-surface);border:1px solid var(--dark-surface);--fg:var(--fg-d);--accent:var(--accent-d);--mute:var(--mute-d);}
+  .panel[data-alt-bg]{background:#F7F9FB;}
+
+  /* ---------- small-size proof row ---------- */
+  .small-row{
+    margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  }
+  @media (max-width:720px){ .small-row{grid-template-columns:1fr;} }
+  .small-cell{
+    border-radius:10px;padding:14px 16px;display:flex;align-items:center;
+    gap:22px;flex-wrap:wrap;min-height:60px;overflow:hidden;
+  }
+  .small-cell.light{background:#F7F9FB;border:1px solid var(--hair);--fg:var(--fg-l);--accent:var(--accent-l);--mute:var(--mute-l);}
+  .small-cell.dark{background:var(--dark-surface);--fg:var(--fg-d);--accent:var(--accent-d);--mute:var(--mute-d);}
+  .small-cell .caption{
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;margin-left:auto;opacity:.55;color:var(--fg);
+  }
+  .sm{--logo-size:16px;}
+
+  /* ================= LOGO PRIMITIVES ================= */
+  .logo{
+    font-size:var(--logo-size);
+    color:var(--fg);
+    line-height:1;
+    display:inline-flex;align-items:center;
+    white-space:nowrap;
+    max-width:100%;
+  }
+  .logo svg{display:block;overflow:visible;}
+  .accent{color:var(--accent);}
+
+  /* blinking cursor */
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  .caret-blink{animation:blink 1.1s steps(1,end) infinite;}
+  @media (prefers-reduced-motion:reduce){ .caret-blink{animation:none;} }
+
+  /* ---- Option 1 : JetBrains Mono — baseline rule wordmark ---- */
+  .lg1{font-family:'JetBrains Mono',monospace;font-weight:500;letter-spacing:-.03em;}
+  .lg1 .b{border-bottom:.11em solid var(--accent);padding-bottom:.16em;}
+  .lg1 .l{font-weight:800;color:var(--accent);margin-left:.34em;padding-bottom:.16em;display:inline-block;}
+
+  /* ---- Option 2 : IBM Plex Mono — [BL] bracket monogram ---- */
+  .lg2{font-family:'IBM Plex Mono',monospace;font-weight:600;letter-spacing:-.02em;gap:.6em;}
+  .lg2 .mark{width:2.1em;height:2.1em;flex:none;}
+  .lg2 .wm .a{color:var(--fg);}
+  .lg2 .wm .b{color:var(--mute);font-weight:400;}
+
+  /* ---- Option 3 : Space Mono — terminal prompt ---- */
+  .lg3{font-family:'Space Mono',monospace;font-weight:700;letter-spacing:-.02em;}
+  .lg3 .chev{color:var(--accent);margin-right:.5em;font-weight:700;}
+  .lg3 .thin{font-weight:400;color:var(--mute);}
+  .lg3 .cur{
+    display:inline-block;width:.52em;height:1.02em;background:var(--accent);
+    margin-left:.28em;vertical-align:-.16em;border-radius:1px;
+  }
+
+  /* ---- Option 4 : Fira Code — caret app-tile + stacked wordmark ---- */
+  .lg4{font-family:'Fira Code',monospace;gap:.62em;}
+  .lg4 .tile{width:2.35em;height:2.35em;flex:none;}
+  .lg4 .stack{display:flex;flex-direction:column;gap:.22em;}
+  .lg4 .n1{font-weight:700;letter-spacing:-.03em;line-height:1;}
+  .lg4 .n2{
+    font-weight:400;font-size:.44em;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--mute);line-height:1;
+  }
+
+  /* ---- Option 5 : Source Code Pro — snake_case wordmark (alt palette) ---- */
+  .lg5{font-family:'Source Code Pro',monospace;font-weight:600;letter-spacing:-.02em;}
+  .lg5 .us{color:var(--accent);font-weight:700;}
+  .lg5 .tail{color:var(--fg);}
+
+  /* ---- Option 6 : Roboto Mono — BL rule monogram (alt palette) ---- */
+  .lg6{font-family:'Roboto Mono',monospace;font-weight:500;letter-spacing:-.02em;gap:.62em;}
+  .lg6 .mark{width:2.2em;height:2.2em;flex:none;}
+  .lg6 .wm strong{font-weight:700;}
+  .lg6 .wm .b{color:var(--accent);font-weight:700;}
+
+  /* ---- Option 7 : DM Mono — quiet lowercase + inline caret ---- */
+  .lg7{font-family:'DM Mono',monospace;font-weight:500;letter-spacing:-.01em;}
+  .lg7 .car{color:var(--accent);margin:0 .12em;font-weight:500;}
+  .lg7 .b{color:var(--mute);}
+
+  /* ---- Option 8 : JetBrains Mono — b-cursor tile + spaced wordmark ---- */
+  .lg8{font-family:'JetBrains Mono',monospace;gap:.66em;}
+  .lg8 .tile{width:2.3em;height:2.3em;flex:none;}
+  .lg8 .wm{
+    font-weight:700;font-size:.72em;letter-spacing:.2em;text-transform:uppercase;
+    line-height:1;
+  }
+  .lg8 .wm .b{font-weight:400;color:var(--mute);}
+
+  footer{
+    margin-top:72px;padding-top:24px;border-top:1px solid var(--hair);
+    color:var(--page-mute);font-size:13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Baseline Labs · Identity exploration</p>
+    <h1>Logo Lab — monospace wordmark concepts</h1>
+    <p class="lede">Eight directions built around a developer/coding typeface. Because the exact font wasn't named, the concepts are spread across <strong>seven different well-known coding fonts</strong> — each one is labelled, so you can point at the one you were thinking of. Every concept is shown on white and on dark, plus at roughly 32px to prove it survives favicon and nav sizes. Just tell us a number.</p>
+  </header>
+
+  <!-- ============ OPTION 1 ============ -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 1</div>
+      <div class="opt-font">JetBrains Mono <span class="tag">Wordmark</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">The name taken literally — a real baseline rule sits under "baseline", and "Labs" lifts off it in the brand blue. Zero ornament, all typography.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light">
+        <span class="logo lg1"><span class="b">baseline</span><span class="l">Labs</span></span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg1"><span class="b">baseline</span><span class="l">Labs</span></span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg1 sm"><span class="b">baseline</span><span class="l">Labs</span></span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg1 sm"><span class="b">baseline</span><span class="l">Labs</span></span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 2 ============ -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 2</div>
+      <div class="opt-font">IBM Plex Mono <span class="tag">Monogram + wordmark</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">A bracketed <code>[BL]</code> monogram — the square bracket is the most universally "code" glyph there is, and the tile crops straight into an app icon.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light">
+        <span class="logo lg2">
+          <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="BL bracket monogram">
+            <rect x="1.5" y="1.5" width="45" height="45" rx="11" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+            <path d="M13 13.5h-4v21h4M35 13.5h4v21h-4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="square"/>
+            <text x="24" y="31.6" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="15.5" font-weight="700" fill="var(--fg)" letter-spacing="-0.5">BL</text>
+          </svg>
+          <span class="wm"><span class="a">Baseline</span><span class="b">Labs</span></span>
+        </span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg2">
+          <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="BL bracket monogram">
+            <rect x="1.5" y="1.5" width="45" height="45" rx="11" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+            <path d="M13 13.5h-4v21h4M35 13.5h4v21h-4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="square"/>
+            <text x="24" y="31.6" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="15.5" font-weight="700" fill="var(--fg)" letter-spacing="-0.5">BL</text>
+          </svg>
+          <span class="wm"><span class="a">Baseline</span><span class="b">Labs</span></span>
+        </span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg2 sm">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="45" height="45" rx="11" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+            <path d="M13 13.5h-4v21h4M35 13.5h4v21h-4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="square"/>
+            <text x="24" y="31.6" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="15.5" font-weight="700" fill="var(--fg)" letter-spacing="-0.5">BL</text>
+          </svg>
+          <span class="wm"><span class="a">Baseline</span><span class="b">Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg2 sm">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="45" height="45" rx="11" fill="none" stroke="var(--accent)" stroke-width="2.4"/>
+            <path d="M13 13.5h-4v21h4M35 13.5h4v21h-4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="square"/>
+            <text x="24" y="31.6" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="15.5" font-weight="700" fill="var(--fg)" letter-spacing="-0.5">BL</text>
+          </svg>
+          <span class="wm"><span class="a">Baseline</span><span class="b">Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 3 ============ -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 3</div>
+      <div class="opt-font">Space Mono <span class="tag">Wordmark</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">A terminal prompt with a live blinking cursor. Space Mono's quirky, slightly retro cut keeps it from feeling like a stock developer logo.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light">
+        <span class="logo lg3"><span class="chev">&gt;</span>baseline<span class="thin">_labs</span><span class="cur caret-blink"></span></span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg3"><span class="chev">&gt;</span>baseline<span class="thin">_labs</span><span class="cur caret-blink"></span></span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg3 sm"><span class="chev">&gt;</span>baseline<span class="thin">_labs</span><span class="cur caret-blink"></span></span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg3 sm"><span class="chev">&gt;</span>baseline<span class="thin">_labs</span><span class="cur caret-blink"></span></span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 4 ============ -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 4</div>
+      <div class="opt-font">Fira Code <span class="tag">App tile + wordmark</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">A solid tile holding a caret resting on a baseline rule — reads as "level up from the baseline", and it is already the correct shape for a Play Store icon.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light">
+        <span class="logo lg4">
+          <svg class="tile" viewBox="0 0 48 48" role="img" aria-label="Caret above a baseline rule">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <path d="M14 25.5 24 15l10 10.5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="13" y="31.5" width="22" height="3.2" rx="1.6" fill="#fff" opacity=".92"/>
+          </svg>
+          <span class="stack">
+            <span class="n1">Baseline</span>
+            <span class="n2">Labs</span>
+          </span>
+        </span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg4">
+          <svg class="tile" viewBox="0 0 48 48" role="img" aria-label="Caret above a baseline rule">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <path d="M14 25.5 24 15l10 10.5" fill="none" stroke="#0B2437" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="13" y="31.5" width="22" height="3.2" rx="1.6" fill="#0B2437" opacity=".92"/>
+          </svg>
+          <span class="stack">
+            <span class="n1">Baseline</span>
+            <span class="n2">Labs</span>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg4 sm">
+          <svg class="tile" viewBox="0 0 48 48" aria-hidden="true">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <path d="M14 25.5 24 15l10 10.5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="13" y="31.5" width="22" height="3.2" rx="1.6" fill="#fff" opacity=".92"/>
+          </svg>
+          <span class="stack"><span class="n1">Baseline</span><span class="n2">Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg4 sm">
+          <svg class="tile" viewBox="0 0 48 48" aria-hidden="true">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <path d="M14 25.5 24 15l10 10.5" fill="none" stroke="#0B2437" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="13" y="31.5" width="22" height="3.2" rx="1.6" fill="#0B2437" opacity=".92"/>
+          </svg>
+          <span class="stack"><span class="n1">Baseline</span><span class="n2">Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 5 ============ -->
+  <section class="opt" style="--fg-l:#16202A;--accent-l:#C2410C;--mute-l:#7C8B99;--fg-d:#F5F1EC;--accent-d:#F97316;--mute-d:#93A3B3;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 5</div>
+      <div class="opt-font">Source Code Pro <span class="tag">Wordmark</span> <span class="tag">Alt palette — ember</span></div>
+      <p class="opt-why">A variable name: <code>baseline_labs</code>, with the underscore doing the connecting work in a warm ember accent. A deliberate step away from the blues if you ever want a second brand voice.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light" data-alt-bg>
+        <span class="logo lg5">baseline<span class="us">_</span><span class="tail">labs</span></span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg5">baseline<span class="us">_</span><span class="tail">labs</span></span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg5 sm">baseline<span class="us">_</span><span class="tail">labs</span></span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg5 sm">baseline<span class="us">_</span><span class="tail">labs</span></span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 6 ============ -->
+  <section class="opt" style="--fg-l:#0F2E2B;--accent-l:#0E5F58;--mute-l:#6E8985;--fg-d:#EAF6F4;--accent-d:#34A896;--mute-d:#7FA39D;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 6</div>
+      <div class="opt-font">Roboto Mono <span class="tag">Monogram + wordmark</span> <span class="tag">Alt palette — deep teal</span></div>
+      <p class="opt-why">"BL" sitting on a thick baseline rule inside a soft square. Roboto Mono is the most neutral of the coding fonts, so the mark carries the personality and the type stays quiet.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light" data-alt-bg>
+        <span class="logo lg6">
+          <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="BL on a baseline rule">
+            <rect x="1.4" y="1.4" width="45.2" height="45.2" rx="10" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+            <text x="24" y="28.5" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="17" font-weight="700" fill="var(--fg)" letter-spacing="-1">BL</text>
+            <rect x="11.5" y="33.5" width="25" height="3.4" rx="1.7" fill="var(--accent)"/>
+          </svg>
+          <span class="wm"><strong>Baseline</strong> <span class="b">Labs</span></span>
+        </span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg6">
+          <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="BL on a baseline rule">
+            <rect x="1.4" y="1.4" width="45.2" height="45.2" rx="10" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+            <text x="24" y="28.5" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="17" font-weight="700" fill="var(--fg)" letter-spacing="-1">BL</text>
+            <rect x="11.5" y="33.5" width="25" height="3.4" rx="1.7" fill="var(--accent)"/>
+          </svg>
+          <span class="wm"><strong>Baseline</strong> <span class="b">Labs</span></span>
+        </span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg6 sm">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="1.4" y="1.4" width="45.2" height="45.2" rx="10" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+            <text x="24" y="28.5" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="17" font-weight="700" fill="var(--fg)" letter-spacing="-1">BL</text>
+            <rect x="11.5" y="33.5" width="25" height="3.4" rx="1.7" fill="var(--accent)"/>
+          </svg>
+          <span class="wm"><strong>Baseline</strong> <span class="b">Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg6 sm">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="1.4" y="1.4" width="45.2" height="45.2" rx="10" fill="none" stroke="var(--accent)" stroke-width="2.6"/>
+            <text x="24" y="28.5" text-anchor="middle" font-family="'Roboto Mono',monospace" font-size="17" font-weight="700" fill="var(--fg)" letter-spacing="-1">BL</text>
+            <rect x="11.5" y="33.5" width="25" height="3.4" rx="1.7" fill="var(--accent)"/>
+          </svg>
+          <span class="wm"><strong>Baseline</strong> <span class="b">Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 7 ============ -->
+  <section class="opt" style="--fg-l:#12151A;--accent-l:#105085;--mute-l:#8A97A3;--fg-d:#F2F5F8;--accent-d:#1E98CC;--mute-d:#8FA3B4;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 7</div>
+      <div class="opt-font">DM Mono <span class="tag">Wordmark</span> <span class="tag">Near-mono, blue accent</span></div>
+      <p class="opt-why">The most understated of the set. DM Mono's low-contrast, slightly humanist letterforms plus a single caret standing in for the space — quiet enough to sit inside an app UI without shouting.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light">
+        <span class="logo lg7">baseline<span class="car">^</span><span class="b">labs</span></span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg7">baseline<span class="car">^</span><span class="b">labs</span></span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg7 sm">baseline<span class="car">^</span><span class="b">labs</span></span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg7 sm">baseline<span class="car">^</span><span class="b">labs</span></span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPTION 8 ============ -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 8</div>
+      <div class="opt-font">JetBrains Mono <span class="tag">Icon + wordmark</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">A lowercase <code>b</code> followed by a solid cursor block — the icon is literally "typing has started". Uppercase, letter-spaced wordmark alongside so the lockup holds together in a nav bar.</p>
+    </div>
+    <div class="panels">
+      <div class="panel light">
+        <span class="logo lg8">
+          <svg class="tile" viewBox="0 0 48 48" role="img" aria-label="Letter b with a terminal cursor block">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <text x="10.5" y="33" font-family="'JetBrains Mono',monospace" font-size="26" font-weight="800" fill="#fff">b</text>
+            <rect x="30.5" y="16.5" width="7.5" height="17" rx="1.5" fill="#fff" opacity=".95"/>
+          </svg>
+          <span class="wm">Baseline<span class="b"> Labs</span></span>
+        </span>
+      </div>
+      <div class="panel dark">
+        <span class="logo lg8">
+          <svg class="tile" viewBox="0 0 48 48" role="img" aria-label="Letter b with a terminal cursor block">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <text x="10.5" y="33" font-family="'JetBrains Mono',monospace" font-size="26" font-weight="800" fill="#0B2437">b</text>
+            <rect x="30.5" y="16.5" width="7.5" height="17" rx="1.5" fill="#0B2437" opacity=".95"/>
+          </svg>
+          <span class="wm">Baseline<span class="b"> Labs</span></span>
+        </span>
+      </div>
+    </div>
+    <div class="small-row">
+      <div class="small-cell light">
+        <span class="logo lg8 sm">
+          <svg class="tile" viewBox="0 0 48 48" aria-hidden="true">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <text x="10.5" y="33" font-family="'JetBrains Mono',monospace" font-size="26" font-weight="800" fill="#fff">b</text>
+            <rect x="30.5" y="16.5" width="7.5" height="17" rx="1.5" fill="#fff" opacity=".95"/>
+          </svg>
+          <span class="wm">Baseline<span class="b"> Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+      <div class="small-cell dark">
+        <span class="logo lg8 sm">
+          <svg class="tile" viewBox="0 0 48 48" aria-hidden="true">
+            <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+            <text x="10.5" y="33" font-family="'JetBrains Mono',monospace" font-size="26" font-weight="800" fill="#0B2437">b</text>
+            <rect x="30.5" y="16.5" width="7.5" height="17" rx="1.5" fill="#0B2437" opacity=".95"/>
+          </svg>
+          <span class="wm">Baseline<span class="b"> Labs</span></span>
+        </span>
+        <span class="caption">32px</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Fonts shown: JetBrains Mono (1, 8) · IBM Plex Mono (2) · Space Mono (3) · Fira Code (4) · Source Code Pro (5) · Roboto Mono (6) · DM Mono (7). Options 1–4, 7 and 8 use the existing brand blues (#105085 / #1E98CC); options 5 and 6 explore alternative palettes. Everything on this page is live HTML, CSS and inline SVG — no images.
+  </footer>
+
+</div>
+</body>
+</html>

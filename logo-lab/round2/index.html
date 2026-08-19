@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baseline Labs — Logo Lab · Round 2</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&family=Source+Code+Pro:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#105085; --brand-2:#1E98CC;
+    --ink:#0B2437; --dark-surface:#0B2437;
+    --page-mute:#5A6B7A; --hair:#E3E9EF;
+  }
+  *{box-sizing:border-box;}
+  html,body{max-width:100%;overflow-x:hidden;}
+  body{
+    margin:0;background:#fff;color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:56px 24px 96px;}
+
+  /* ---------- page chrome ---------- */
+  .masthead{border-bottom:1px solid var(--hair);padding-bottom:28px;margin-bottom:52px;}
+  .eyebrow{
+    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--brand);margin:0 0 10px;
+  }
+  h1{
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(24px,4vw,32px);
+    font-weight:700;letter-spacing:-.02em;margin:0 0 12px;
+  }
+  .lede{margin:0;max-width:66ch;color:var(--page-mute);}
+  .lede strong{color:var(--ink);font-weight:600;}
+  .backlink{
+    display:inline-block;margin-top:16px;font-size:13px;color:var(--brand);
+    text-decoration:none;border-bottom:1px solid #C9DCEB;
+  }
+  .backlink:hover{border-bottom-color:var(--brand);}
+
+  /* ---------- option shell ---------- */
+  .opt{
+    padding-top:44px;margin-top:44px;border-top:1px solid var(--hair);
+    --fg-l:var(--ink);   --accent-l:var(--brand);   --mute-l:#7C8B99;
+    --fg-d:#FFFFFF;      --accent-d:var(--brand-2); --mute-d:#7E97AC;
+    --logo-size:clamp(17px,3.4vw,30px);
+  }
+  .opt:first-of-type{border-top:0;margin-top:0;padding-top:0;}
+  .opt-head{margin-bottom:22px;}
+  .opt-no{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--brand);}
+  .opt-font{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:2px 0 4px;}
+  .opt-why{margin:0;color:var(--page-mute);font-size:14px;max-width:72ch;}
+  .tag{
+    display:inline-block;margin-left:8px;vertical-align:2px;
+    font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--page-mute);
+    border:1px solid var(--hair);border-radius:999px;padding:2px 8px;
+  }
+
+  /* ---------- panels ---------- */
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .row + .row{margin-top:14px;}
+  @media (max-width:720px){ .row{grid-template-columns:1fr;} }
+
+  .cell{border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .cell.light{background:#fff;border:1px solid var(--hair);--fg:var(--fg-l);--accent:var(--accent-l);--mute:var(--mute-l);}
+  .cell.dark{background:var(--dark-surface);border:1px solid var(--dark-surface);--fg:var(--fg-d);--accent:var(--accent-d);--mute:var(--mute-d);}
+  .cell.tinted{background:#F7F9FB;}
+
+  .cell.big{padding:34px 22px;min-height:132px;}
+  .cell.small{padding:14px 16px;min-height:60px;gap:20px;justify-content:flex-start;flex-wrap:wrap;}
+  .cell.anim{padding:16px;min-height:74px;gap:18px;justify-content:flex-start;flex-wrap:wrap;}
+  .caption{
+    font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;margin-left:auto;opacity:.55;color:var(--fg);
+  }
+  .sm{--logo-size:15px;}
+  .an{--logo-size:clamp(15px,3vw,21px);}
+
+  /* ================= LOGO PRIMITIVES ================= */
+  .logo{
+    font-size:var(--logo-size);color:var(--fg);line-height:1;letter-spacing:0;
+    display:inline-flex;align-items:baseline;white-space:nowrap;max-width:100%;
+  }
+  .logo svg{display:block;overflow:visible;flex:none;}
+  .pr{color:var(--accent);}      /* prompt */
+  .us{color:var(--accent);}      /* underscore */
+  .lb{color:var(--accent);}      /* "labs" half */
+  .mu{color:var(--mute);}
+
+  /* cursors */
+  .blk{
+    display:inline-block;width:.55em;height:1em;background:var(--accent);
+    border-radius:1px;margin-left:.22em;vertical-align:-.02em;
+  }
+  .ulc{color:var(--accent);margin-left:.06em;}
+
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  .cur i, .lockcur{animation:blink 1.05s steps(1,end) infinite;}
+
+  /* ---- typing preview machinery ---- */
+  .tw{display:inline-flex;align-items:baseline;}
+  .typed{
+    display:inline-block;overflow:hidden;white-space:nowrap;line-height:1;
+    padding-bottom:.3em;margin-bottom:-.3em;
+    /* Defaults to the FINISHED wordmark: if the animation never runs
+       (reduced motion, throttled tab, unsupported), it degrades to the
+       full lockup rather than to nothing. */
+    width:var(--w);
+    animation:type 6s steps(var(--n),end) infinite;
+  }
+  @keyframes type{
+    0%{width:0}
+    46%{width:var(--w)}
+    78%{width:var(--w)}
+    100%{width:0}
+  }
+  .cur{display:inline-block;}
+  /* cursor that disappears once typing settles (for the no-cursor-at-rest options) */
+  .cur.transient{animation:fadecur 6s linear infinite;}
+  @keyframes fadecur{
+    0%,46%{opacity:1}
+    54%,74%{opacity:0}
+    78%,100%{opacity:1}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .typed{width:var(--w) !important;animation:none !important;}
+    .cur{animation:none !important;}
+    .cur i,.lockcur{animation:none !important;opacity:1;}
+    .cur.transient{display:none;}
+  }
+
+  /* ---- Option 1 : Space Mono ---- */
+  .lg1{font-family:'Space Mono',monospace;font-weight:700;}
+  /* ---- Option 2 : Source Code Pro ---- */
+  .lg2{font-family:'Source Code Pro',monospace;font-weight:600;}
+  /* ---- Option 3 : Source Code Pro (ember) ---- */
+  .lg3{font-family:'Source Code Pro',monospace;font-weight:600;}
+  /* ---- Option 4 : Space Mono + >_ tile ---- */
+  .lg4{font-family:'Space Mono',monospace;font-weight:700;gap:.6em;}
+  .lg4 .tile{width:2.25em;height:2.25em;align-self:center;}
+  /* ---- Option 5 : Source Code Pro + b_ tile (ember) ---- */
+  .lg5{font-family:'Source Code Pro',monospace;font-weight:600;gap:.6em;}
+  .lg5 .tile{width:2.25em;height:2.25em;align-self:center;}
+  /* ---- Option 6 : IBM Plex Mono ---- */
+  .lg6{font-family:'IBM Plex Mono',monospace;font-weight:600;}
+
+  footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--hair);color:var(--page-mute);font-size:13px;}
+  footer code{font-family:'Source Code Pro',monospace;font-size:12px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Baseline Labs · Round 2 — blended</p>
+    <h1>Blending Option 3 &amp; Option 5</h1>
+    <p class="lede">Six blends of the two you picked: the <strong>terminal prompt with a blinking cursor</strong> and the <strong>snake_case variable name with an accented underscore</strong>. Each one varies a different axis — prompt or no prompt, block cursor or underscore cursor or none, and which element carries the accent. Four in the brand blues, two in ember. Every option includes a <strong>typing preview</strong> at the bottom, since that is how it will behave on the landing page.</p>
+    <a class="backlink" href="../">← Back to round one</a>
+  </header>
+
+  <!-- ================= OPTION 1 ================= -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 1</div>
+      <div class="opt-font">Space Mono <span class="tag">Prompt + block cursor</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">The most literal blend: the prompt and the trailing cursor both carry the accent, and the name stays a single solid variable. Types out like a command being entered.</p>
+    </div>
+    <template class="t-lock"><span class="logo lg1"><span class="pr">&gt;</span>&nbsp;baseline_labs<i class="blk lockcur"></i></span></template>
+    <template class="t-anim"><span class="logo lg1 tw an"><span class="typed" style="--n:15;--w:15ch"><span class="pr">&gt;</span>&nbsp;baseline_labs</span><span class="cur"><i class="blk"></i></span></span></template>
+    <div class="row"><div class="cell big light slot-lock"></div><div class="cell big dark slot-lock"></div></div>
+    <div class="row">
+      <div class="cell small light tinted"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+      <div class="cell small dark"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+    </div>
+    <div class="row">
+      <div class="cell anim light tinted"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+      <div class="cell anim dark"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+    </div>
+  </section>
+
+  <!-- ================= OPTION 2 ================= -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 2</div>
+      <div class="opt-font">Source Code Pro <span class="tag">No prompt · underscore cursor</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">No prompt at all — the cursor is a blinking underscore that rhymes with the joining underscore, so the code cue comes entirely from the name itself. The quietest of the six.</p>
+    </div>
+    <template class="t-lock"><span class="logo lg2">baseline_labs<span class="ulc lockcur">_</span></span></template>
+    <template class="t-anim"><span class="logo lg2 tw an"><span class="typed" style="--n:13;--w:13ch">baseline_labs</span><span class="cur"><i class="ulc">_</i></span></span></template>
+    <div class="row"><div class="cell big light slot-lock"></div><div class="cell big dark slot-lock"></div></div>
+    <div class="row">
+      <div class="cell small light tinted"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+      <div class="cell small dark"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+    </div>
+    <div class="row">
+      <div class="cell anim light tinted"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+      <div class="cell anim dark"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+    </div>
+  </section>
+
+  <!-- ================= OPTION 3 ================= -->
+  <section class="opt" style="--fg-l:#16202A;--accent-l:#C2410C;--mute-l:#7C8B99;--fg-d:#F5F1EC;--accent-d:#F97316;--mute-d:#93A3B3;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 3</div>
+      <div class="opt-font">Source Code Pro <span class="tag">No prompt · no resting cursor</span> <span class="tag">Ember</span></div>
+      <p class="opt-why">The accent runs from the underscore through <code>labs</code>, so the second half of the name glows. The cursor appears only while typing and then retires — the resting logo is pure wordmark.</p>
+    </div>
+    <template class="t-lock"><span class="logo lg3">baseline<span class="us">_</span><span class="lb">labs</span></span></template>
+    <template class="t-anim"><span class="logo lg3 tw an"><span class="typed" style="--n:13;--w:13ch">baseline<span class="us">_</span><span class="lb">labs</span></span><span class="cur transient"><i class="blk"></i></span></span></template>
+    <div class="row"><div class="cell big light tinted slot-lock"></div><div class="cell big dark slot-lock"></div></div>
+    <div class="row">
+      <div class="cell small light tinted"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+      <div class="cell small dark"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+    </div>
+    <div class="row">
+      <div class="cell anim light tinted"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+      <div class="cell anim dark"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+    </div>
+  </section>
+
+  <!-- ================= OPTION 4 ================= -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 4</div>
+      <div class="opt-font">Space Mono <span class="tag">Icon mark <code>&gt;_</code> + wordmark</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">The prompt moves out of the wordmark and becomes the app icon — a <code>&gt;_</code> tile that stands alone on a home screen. The wordmark beside it stays clean, with only the underscore accented.</p>
+    </div>
+    <template class="t-lock"><span class="logo lg4">
+      <svg class="tile" viewBox="0 0 48 48" role="img" aria-label="Terminal prompt icon">
+        <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+        <path d="M13 17.5 21.5 24 13 30.5" fill="none" stroke="var(--tilefg,#fff)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="25" y="28.6" width="11" height="3.2" rx="1.6" fill="var(--tilefg,#fff)"/>
+      </svg>
+      <span>baseline<span class="us">_</span><span class="mu">labs</span></span>
+    </span></template>
+    <template class="t-anim"><span class="logo lg4 tw an">
+      <svg class="tile" viewBox="0 0 48 48" aria-hidden="true">
+        <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+        <path d="M13 17.5 21.5 24 13 30.5" fill="none" stroke="var(--tilefg,#fff)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="25" y="28.6" width="11" height="3.2" rx="1.6" fill="var(--tilefg,#fff)"/>
+      </svg>
+      <span class="tw"><span class="typed" style="--n:13;--w:13ch">baseline<span class="us">_</span><span class="mu">labs</span></span><span class="cur"><i class="blk"></i></span></span>
+    </span></template>
+    <div class="row"><div class="cell big light slot-lock"></div><div class="cell big dark slot-lock" style="--tilefg:#0B2437"></div></div>
+    <div class="row">
+      <div class="cell small light tinted"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+      <div class="cell small dark" style="--tilefg:#0B2437"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+    </div>
+    <div class="row">
+      <div class="cell anim light tinted"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+      <div class="cell anim dark" style="--tilefg:#0B2437"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+    </div>
+  </section>
+
+  <!-- ================= OPTION 5 ================= -->
+  <section class="opt" style="--fg-l:#16202A;--accent-l:#C2410C;--mute-l:#7C8B99;--fg-d:#F5F1EC;--accent-d:#F97316;--mute-d:#93A3B3;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 5</div>
+      <div class="opt-font">Source Code Pro <span class="tag">Icon mark <code>b_</code> + wordmark</span> <span class="tag">Ember</span></div>
+      <p class="opt-why">A <code>b</code> with the cursor underscore beside it — the initial and the code cue compressed into one square. Ember gives it real presence next to other app icons.</p>
+    </div>
+    <template class="t-lock"><span class="logo lg5">
+      <svg class="tile" viewBox="0 0 48 48" role="img" aria-label="Letter b with cursor underscore">
+        <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+        <text x="10" y="31.5" font-family="'Source Code Pro',monospace" font-size="25" font-weight="700" fill="var(--tilefg,#fff)">b</text>
+        <rect x="26" y="28.3" width="12" height="3.4" rx="1.7" fill="var(--tilefg,#fff)"/>
+      </svg>
+      <span>baseline<span class="us">_</span><span class="mu">labs</span></span>
+    </span></template>
+    <template class="t-anim"><span class="logo lg5 tw an">
+      <svg class="tile" viewBox="0 0 48 48" aria-hidden="true">
+        <rect width="48" height="48" rx="12" fill="var(--accent)"/>
+        <text x="10" y="31.5" font-family="'Source Code Pro',monospace" font-size="25" font-weight="700" fill="var(--tilefg,#fff)">b</text>
+        <rect x="26" y="28.3" width="12" height="3.4" rx="1.7" fill="var(--tilefg,#fff)"/>
+      </svg>
+      <span class="tw"><span class="typed" style="--n:13;--w:13ch">baseline<span class="us">_</span><span class="mu">labs</span></span><span class="cur"><i class="ulc">_</i></span></span>
+    </span></template>
+    <div class="row"><div class="cell big light tinted slot-lock"></div><div class="cell big dark slot-lock" style="--tilefg:#0B2437"></div></div>
+    <div class="row">
+      <div class="cell small light tinted"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+      <div class="cell small dark" style="--tilefg:#0B2437"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+    </div>
+    <div class="row">
+      <div class="cell anim light tinted"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+      <div class="cell anim dark" style="--tilefg:#0B2437"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+    </div>
+  </section>
+
+  <!-- ================= OPTION 6 ================= -->
+  <section class="opt" style="--accent-l:#105085;--accent-d:#1E98CC;">
+    <div class="opt-head">
+      <div class="opt-no">OPTION 6</div>
+      <div class="opt-font">IBM Plex Mono <span class="tag">Shell prompt · no resting cursor</span> <span class="tag">Brand blue</span></div>
+      <p class="opt-why">A close relative of Source Code Pro with slightly warmer letterforms. The <code>$</code> shell prompt sits back in grey while the underscore alone takes the accent — prompt present, but understated.</p>
+    </div>
+    <template class="t-lock"><span class="logo lg6"><span class="mu">$</span>&nbsp;baseline<span class="us">_</span>labs</span></template>
+    <template class="t-anim"><span class="logo lg6 tw an"><span class="typed" style="--n:15;--w:15ch"><span class="mu">$</span>&nbsp;baseline<span class="us">_</span>labs</span><span class="cur transient"><i class="blk"></i></span></span></template>
+    <div class="row"><div class="cell big light slot-lock"></div><div class="cell big dark slot-lock"></div></div>
+    <div class="row">
+      <div class="cell small light tinted"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+      <div class="cell small dark"><span class="sm slot-lock"></span><span class="caption">32px</span></div>
+    </div>
+    <div class="row">
+      <div class="cell anim light tinted"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+      <div class="cell anim dark"><span class="slot-anim"></span><span class="caption">Typing</span></div>
+    </div>
+  </section>
+
+  <footer>
+    Fonts: Space Mono (1, 4) · Source Code Pro (2, 3, 5) · IBM Plex Mono (6, included as a close relative of Source Code Pro). Brand blue on 1, 2, 4 and 6; ember (<code>#C2410C</code> / <code>#F97316</code>) on 3 and 5. Options 4 and 5 include a standalone icon tile. All live HTML, CSS and inline SVG — no images. Typing previews pause on the finished wordmark and loop; with <code>prefers-reduced-motion</code> enabled they show the finished wordmark only.
+  </footer>
+
+</div>
+
+<script>
+  // Stamp each option's lockup and animated variants into their slots.
+  document.querySelectorAll('.opt').forEach(function (opt) {
+    var lock = opt.querySelector('template.t-lock');
+    var anim = opt.querySelector('template.t-anim');
+    if (lock) {
+      opt.querySelectorAll('.slot-lock').forEach(function (slot) {
+        slot.appendChild(lock.content.cloneNode(true));
+      });
+    }
+    if (anim) {
+      opt.querySelectorAll('.slot-anim').forEach(function (slot) {
+        slot.appendChild(anim.content.cloneNode(true));
+      });
+    }
+  });
+
+  // Every preview starts animating at page load, so the loops stay naturally
+  // in phase — no manual syncing needed.
+</script>
+</body>
+</html>
