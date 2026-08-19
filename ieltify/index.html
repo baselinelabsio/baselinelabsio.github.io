@@ -52,6 +52,7 @@
     .deck-hint { text-align: center; margin-top: 1rem; color: var(--faint); font-size: .84rem; }
 
     .disclaimer { margin-top: 1.4rem; color: var(--faint); font-size: .78rem; line-height: 1.5; max-width: 46rem; }
+    .credit-tile .big .unit { font-size: .95rem; font-weight: 700; color: rgba(255,255,255,.6); margin-left: .1rem; }
 
     @media (max-width: 820px) { .auth-grid { grid-template-columns: 1fr; } }
   </style>
@@ -472,23 +473,23 @@
           </div>
 
           <div>
-            <p style="margin-bottom:1rem;color:rgba(255,255,255,.8);font-size:.95rem">800 credits is roughly any one of these:</p>
+            <p style="margin-bottom:1rem;color:rgba(255,255,255,.8);font-size:.95rem">That's enough for roughly any one of these:</p>
             <div class="credit-grid">
               <div class="credit-tile">
-                <div class="big">80</div>
-                <div class="cap">Listening or Reading tests</div>
+                <div class="big">80 <span class="unit">tests</span></div>
+                <div class="cap">Listening or Reading</div>
               </div>
               <div class="credit-tile">
-                <div class="big">40</div>
-                <div class="cap">Writing tests</div>
+                <div class="big">40 <span class="unit">tests</span></div>
+                <div class="cap">Writing</div>
               </div>
               <div class="credit-tile">
-                <div class="big">20</div>
-                <div class="cap">Speaking tests</div>
+                <div class="big">20 <span class="unit">tests</span></div>
+                <div class="cap">Speaking</div>
               </div>
               <div class="credit-tile">
-                <div class="big">10</div>
-                <div class="cap">Full tests</div>
+                <div class="big">10 <span class="unit">tests</span></div>
+                <div class="cap">Full mock tests</div>
               </div>
             </div>
           </div>
