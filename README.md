@@ -7,10 +7,10 @@ Static site for Baseline Labs app landing pages, privacy policies, and terms.
 | Page | URL |
 |------|-----|
 | Baseline Labs home | https://baselinelabsio.github.io/ |
-| Ieltify landing | https://baselinelabsio.github.io/ieltify/ |
-| Ieltify privacy | https://baselinelabsio.github.io/ieltify/privacy.html |
-| Ieltify terms | https://baselinelabsio.github.io/ieltify/terms.html |
-| Account deletion | https://baselinelabsio.github.io/ieltify/request-account-deletion/ |
+| IELTS Prep landing | https://baselinelabsio.github.io/ielts-prep/ |
+| IELTS Prep privacy | https://baselinelabsio.github.io/ielts-prep/privacy.html |
+| IELTS Prep terms | https://baselinelabsio.github.io/ielts-prep/terms.html |
+| Account deletion | https://baselinelabsio.github.io/ielts-prep/request-account-deletion/ |
 
 Use the **privacy** and **terms** URLs in Google OAuth consent screen and Play Console.
 
@@ -29,14 +29,14 @@ The page loads env through:
 
 1. Repo **Settings → Secrets and variables → Actions → Variables**
 2. Add variable: `API_URL` = `https://ieltify.eyratech.com` (no trailing slash)
-3. On each deploy, the workflow writes `ieltify/request-account-deletion/config.js` from that variable
+3. On each deploy, the workflow writes `ielts-prep/request-account-deletion/config.js` from that variable
 
 `config.js` is gitignored so the live URL is not committed.
 
 ### Local testing
 
 ```bash
-cd ieltify/request-account-deletion
+cd ielts-prep/request-account-deletion
 cp config.example.js config.js
 # edit API_URL if needed, then open index.html
 ```
@@ -51,10 +51,10 @@ Your Nest backend must allow CORS from `https://baselinelabsio.github.io` (see `
 git clone https://github.com/baselinelabsio/baselinelabsio.github.io.git
 cd baselinelabsio.github.io
 
-# Copy all files from this folder into the clone (index.html, assets/, ieltify/, README.md)
+# Copy all files from this folder into the clone (index.html, assets/, ielts-prep/, README.md)
 # Then:
 git add .
-git commit -m "Add Baseline Labs and Ieltify static pages"
+git commit -m "Add Baseline Labs and IELTS Prep static pages"
 git push origin main
 ```
 
@@ -65,7 +65,7 @@ cd baselinelabsio.github.io
 git init
 git remote add origin https://github.com/baselinelabsio/baselinelabsio.github.io.git
 git add .
-git commit -m "Add Baseline Labs and Ieltify static pages"
+git commit -m "Add Baseline Labs and IELTS Prep static pages"
 git branch -M main
 git push -u origin main
 ```
@@ -79,7 +79,7 @@ git push -u origin main
 
 ## Add another app later
 
-Duplicate the `ieltify/` folder:
+Duplicate the `ielts-prep/` folder:
 
 ```
 /newapp/
@@ -95,15 +95,15 @@ Add a card on the root `index.html` linking to `/newapp/`.
 In `IeltsPrepApp/app/src/main/res/values/strings.xml`:
 
 ```xml
-<string name="privacy_policy_url">https://baselinelabsio.github.io/ieltify/privacy.html</string>
+<string name="privacy_policy_url">https://baselinelabsio.github.io/ielts-prep/privacy.html</string>
 ```
 
 ## Screenshot
 
-Replace the placeholder on `ieltify/index.html` with a real image:
+Replace the placeholder on `ielts-prep/index.html` with a real image:
 
 ```html
-<img class="screenshot" src="assets/screenshot.png" alt="Ieltify app screenshot">
+<img class="screenshot" src="assets/screenshot.png" alt="IELTS Prep app screenshot">
 ```
 
-Put the image at `ieltify/assets/screenshot.png`.
+Put the image at `ielts-prep/assets/screenshot.png`.
