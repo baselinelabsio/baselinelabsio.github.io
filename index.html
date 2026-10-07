@@ -3,247 +3,441 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseline Labs — App studio for focused learning</title>
-  <meta name="description" content="Baseline Labs is an independent app studio building practical mobile apps for focused learning and practice. Our current project is IELTS Prep: AI Band Score, an IELTS practice app.">
+  <title>PrepMaestro | AI-Powered Exam Practice &amp; Mock Tests</title>
+  <meta name="description" content="Master high-stakes exams with PrepMaestro. Authentic timed practice tests and instant, rubric-backed AI scoring for IELTS, SAT, TOEFL, and PTE.">
+
+  <meta property="og:title" content="PrepMaestro — Conduct Your Prep. Master Your Score.">
+  <meta property="og:description" content="Practice under real exam conditions with instant AI band scores and diagnostic feedback.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prepmaestro.com/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PrepMaestro — Conduct Your Prep. Master Your Score.">
+  <meta name="twitter:description" content="Practice under real exam conditions with instant AI band scores and diagnostic feedback.">
+
   <link rel="icon" href="assets/brand/icon-light-32.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/icon-light-256.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css?v=16">
+  <link rel="stylesheet" href="assets/css/main.css?v=34">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PrepMaestro",
+    "url": "https://prepmaestro.com",
+    "description": "AI-powered test preparation ecosystem offering authentic timed mock tests and instant rubric-backed scoring for IELTS, SAT, TOEFL, and PTE."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "IELTS Maestro: Prep Like a Pro",
+    "alternateName": "IELTSMaestro",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "EducationalApplication",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250" },
+    "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" },
+    "description": "AI-powered IELTS preparation app providing instant band scores and diagnostic feedback for Listening, Reading, Writing, and Speaking."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How accurate is the AI scoring in IELTSMaestro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "IELTSMaestro's AI engine is calibrated against thousands of officially graded IELTS Writing and Speaking samples. It evaluates responses across Task Achievement, Coherence & Cohesion, Lexical Resource, and Grammatical Range & Accuracy to provide band scores within a 0.5 margin of official examiners." } },
+      { "@type": "Question", "name": "Can I use IELTSMaestro for both Academic and General Training?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, IELTSMaestro includes full-length practice tests, writing prompts, and reading passages tailored for both IELTS Academic and IELTS General Training modules." } },
+      { "@type": "Question", "name": "Does the app offer timed practice tests?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, all full-length mock tests and individual skill modules run on official test-day timers to build time-management skills under real exam pressure." } }
+    ]
+  }
+  </script>
+
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="shell nav">
-      <a class="brand" href="/" aria-label="Baseline Labs home">
-        <img src="assets/brand/lockup-light.svg" alt="Baseline Labs" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-        <span class="brand-fallback" style="display:none">Baseline Labs</span>
-      </a>
 
-      <nav aria-label="Primary">
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#project">Our work</a></li>
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="ielts-prep/">IELTS Prep</a></li>
-          <li><a href="mailto:baselinelabs.io@gmail.com">Contact</a></li>
-        </ul>
-      </nav>
+<!-- Header -->
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="/" aria-label="PrepMaestro home">
+      <span class="brand-fallback">PrepMaestro</span>
+    </a>
 
-      <div class="nav-cta">
-        <a class="btn btn--primary btn--sm" href="mailto:baselinelabs.io@gmail.com">Work with us</a>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
-      </div>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="/apps/ielts-maestro/">IELTSMaestro</a></li>
+        <li><a href="#why">Features</a></li>
+        <li><a href="#coming-soon">Coming Soon</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn--primary btn--sm" href="/apps/ielts-maestro/">Start Free Mock Test</a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <!-- Hero: the studio -->
-    <section class="hero">
-      <div class="shell">
-        <div class="hero-center">
-          <span class="hero-type" role="img" aria-label="baseline_labs">
-            <img class="hero-type-icon" src="assets/brand/icon-light.svg" alt="" aria-hidden="true" width="48" height="48">
-            <span class="hero-type-text" aria-hidden="true"><span class="b">baseline</span><span class="u">_</span><span class="l">labs</span></span>
-            <span class="hero-type-cursor" aria-hidden="true"></span>
-          </span>
-          <h1>We build mobile apps for <span style="color:var(--primary)">focused learning</span>.</h1>
-          <p class="lead">Baseline Labs is a small studio that turns everyday practice into real progress — crafting apps that are calm to use, honest with feedback, and built to reach a goal.</p>
-          <div class="hero-actions">
-            <a class="btn btn--primary" href="#project">See our work</a>
-            <a class="btn btn--ghost" href="mailto:baselinelabs.io@gmail.com">Get in touch</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<main>
 
-    <!-- Featured project: IELTS Prep (expanding dark showcase) -->
-    <section class="showcase" id="project" aria-labelledby="project-title">
-      <div class="showcase-sticky">
-      <div class="showcase-panel">
-        <div class="showcase-inner">
-          <div class="showcase-body">
-            <!-- Left: static brand lockup, then one feature at a time -->
-            <div class="showcase-left">
-              <div class="showcase-brand">
-                <img class="app-icon" src="ielts-prep/app-icon.png" alt="" aria-hidden="true" width="82" height="82">
-                <span class="eyebrow eyebrow--dark">Featured project</span>
-                <h2 id="project-title">IELTS Prep — your complete band-score coach in your pocket</h2>
-              </div>
-
-              <div class="sc-list">
-                <div class="sc-item is-active" role="tabpanel"
-                  data-shot="ielts-prep/app_screenshots_v2/band-analysis.jpg"
-                  data-alt="IELTS Prep full test analysis with an AI-scored overall band of 7.0"
-                  data-caption="An overall band across all four skills">
-                  <span class="sc-num">01 / 05</span>
-                  <span class="sc-title">See your band score, AI-scored</span>
-                  <span class="sc-desc">Every full test returns an AI band score with a per-module breakdown for Listening, Reading, Writing and Speaking.</span>
-                </div>
-
-                <div class="sc-item" role="tabpanel"
-                  data-shot="ielts-prep/app_screenshots/Screenshot_2026-07-17-18-16-43-362_com.baselinelabs.ieltify.jpg"
-                  data-alt="IELTS Prep listening test in progress with a running clock and audio played once"
-                  data-caption="Timed sections, audio played once">
-                  <span class="sc-num">02 / 05</span>
-                  <span class="sc-title">Real exam conditions</span>
-                  <span class="sc-desc">A running clock, authentic question formats, and audio you hear only once — so test day feels familiar.</span>
-                </div>
-
-                <div class="sc-item" role="tabpanel"
-                  data-shot="ielts-prep/app_screenshots_v2/feedback.jpg"
-                  data-alt="IELTS Prep feedback showing strengths and fixes across the band criteria"
-                  data-caption="Strengths and fixes, not just a number">
-                  <span class="sc-num">03 / 05</span>
-                  <span class="sc-title">Feedback that shows you why</span>
-                  <span class="sc-desc">See exactly what earned marks and what cost them, tied to the official band criteria — for Writing and Speaking.</span>
-                </div>
-
-                <div class="sc-item" role="tabpanel"
-                  data-shot="ielts-prep/app_screenshots_v2/mock-tests.jpg"
-                  data-alt="IELTS Prep full mock tests library with available tests and recent results"
-                  data-caption="New timed tests added regularly">
-                  <span class="sc-num">04 / 05</span>
-                  <span class="sc-title">A library that keeps growing</span>
-                  <span class="sc-desc">Full mock tests across every skill, graded Easy to Hard, with new ones added all the time.</span>
-                </div>
-
-                <div class="sc-item" role="tabpanel"
-                  data-shot="ielts-prep/app_screenshots_v2/home-dashboard.jpg"
-                  data-alt="IELTS Prep dashboard showing current band, target band and per-skill progress"
-                  data-caption="Your band today vs. your target">
-                  <span class="sc-num">05 / 05</span>
-                  <span class="sc-title">Built around your goal</span>
-                  <span class="sc-desc">Track your current band against your target, and watch each skill trend as you practise.</span>
-                </div>
-              </div>
-
-              <div class="sc-dots" role="tablist" aria-label="IELTS Prep features">
-                <button class="sc-dot is-active" type="button" role="tab" aria-selected="true" aria-label="See your band score, AI-scored"></button>
-                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Real exam conditions"></button>
-                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Feedback that shows you why"></button>
-                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="A library that keeps growing"></button>
-                <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Built around your goal"></button>
-              </div>
-
-              <div class="showcase-cta">
-                <a class="btn-play btn-play--light" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener" aria-label="Get IELTS Prep on Google Play">
-                  <img class="bp-icon" src="images/google-play.png" alt="" aria-hidden="true" width="24" height="24">
-                  <span class="bp-lines"><span class="bp-small">Get it on</span><span class="bp-big">Google Play</span></span>
-                </a>
-                <a class="btn btn--light" href="ielts-prep/">Explore IELTS Prep</a>
-              </div>
-            </div>
-
-            <!-- Right: changing screenshot -->
-            <div class="sc-media">
-              <div class="phone">
-                <div class="phone-screen">
-                  <img src="ielts-prep/app_screenshots_v2/band-analysis.jpg" alt="IELTS Prep full test analysis with an AI-scored overall band of 7.0" width="1080" height="2400">
-                </div>
-              </div>
-              <p class="sc-caption">An overall band across all four skills</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <!-- Studio principles -->
-    <section class="section" id="studio">
-      <div class="shell">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">How we build</span>
-          <h2>A studio obsessed with the details that help people learn.</h2>
-          <p>We keep our surface area small and our craft high. Every app we ship follows the same principles.</p>
-        </div>
-
-        <div class="skills-grid reveal" style="margin-top:3rem">
-          <div class="skill-card">
-            <span class="icon" style="background:var(--listening)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h2v-7H5a7 7 0 0 1 14 0h-2v7h2a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9Z"/></svg>
-            </span>
-            <h4>Real over flashy</h4>
-            <p>Timed sections, authentic content and honest scoring — practice that mirrors the real thing.</p>
-          </div>
-          <div class="skill-card">
-            <span class="icon" style="background:var(--speaking)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10a7 7 0 0 1-14 0M12 17v4"/></svg>
-            </span>
-            <h4>Feedback that teaches</h4>
-            <p>AI that doesn't just grade — it shows people the specific next step to improve.</p>
-          </div>
-          <div class="skill-card">
-            <span class="icon" style="background:var(--reading)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h5v18H5a2 2 0 0 1-2-2Z"/><path d="M21 5a2 2 0 0 0-2-2h-5v18h5a2 2 0 0 0 2-2Z"/></svg>
-            </span>
-            <h4>Built around a goal</h4>
-            <p>Set a target, get a path. Our apps shape themselves around what each person actually needs.</p>
-          </div>
-          <div class="skill-card">
-            <span class="icon" style="background:var(--writing)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-            </span>
-            <h4>Fair by default</h4>
-            <p>Generous free trials and transparent pricing — no dark patterns between people and practice.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section--tight">
-      <div class="shell">
-        <div class="cta-band reveal">
-          <h2>Have an app worth building?</h2>
-          <p>We partner on focused learning and productivity apps. Tell us what you're working on.</p>
-          <div class="hero-actions">
-            <a class="btn btn--light" href="mailto:baselinelabs.io@gmail.com">Start a conversation</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- ============ Hero (doc §2) ============ -->
+  <section class="hero hero--centered">
+    <div class="hero-decor" aria-hidden="true">
+      <!-- Graduation cap, top-left -->
+      <svg class="deco deco--cap" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 24 32 12l28 12-28 12L4 24z"/>
+        <path d="M18 30v10c0 3 6 6 14 6s14-3 14-6V30"/>
+        <path d="M58 24v14"/>
+      </svg>
+      <!-- Open book, mid-left -->
+      <svg class="deco deco--book" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 14h20c3 0 6 2 6 5v31c0-3-3-5-6-5H6V14z"/>
+        <path d="M58 14H38c-3 0-6 2-6 5v31c0-3 3-5 6-5h20V14z"/>
+        <path d="M12 22h12M12 30h12M44 22h8M44 30h8"/>
+      </svg>
+      <!-- Bar chart ascending, bottom-left -->
+      <svg class="deco deco--chart" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 56h48"/>
+        <rect x="12" y="38" width="8" height="18" rx="1.5"/>
+        <rect x="26" y="28" width="8" height="28" rx="1.5"/>
+        <rect x="40" y="16" width="8" height="40" rx="1.5"/>
+        <path d="M12 10l10 6 10-6 10-4"/>
+      </svg>
+      <!-- Pencil, top-right -->
+      <svg class="deco deco--pencil" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M46 6l12 12-32 32H14V38L46 6z"/>
+        <path d="M40 12l12 12"/>
+        <path d="M14 50l-4 8 8-4"/>
+      </svg>
+      <!-- Light bulb, bottom-right -->
+      <svg class="deco deco--bulb" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 26a12 12 0 1 1 20 9c-2 2-3 4-3 7H23c0-3-1-5-3-7a12 12 0 0 1 0-9z"/>
+        <path d="M26 50h12M28 56h8"/>
+      </svg>
+      <!-- Sparkles -->
+      <svg class="deco deco--spark deco--spark-a" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l1.8 7.2L21 12l-7.2 1.8L12 22l-1.8-8.2L3 12l7.2-1.8z"/>
+      </svg>
+      <svg class="deco deco--spark deco--spark-b" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l1.8 7.2L21 12l-7.2 1.8L12 22l-1.8-8.2L3 12l7.2-1.8z"/>
+      </svg>
+    </div>
     <div class="shell">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="/" aria-label="Baseline Labs home">
-            <img src="assets/brand/lockup-light.svg" alt="Baseline Labs" style="height:28px" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
-            <span class="brand-fallback" style="display:none">Baseline Labs</span>
+      <div class="hero-centered">
+        <h1>
+          Conduct Your Prep. <span class="underline-accent">Master Your Score</span> with PrepMaestro.
+        </h1>
+        <p class="lead">
+          The AI-powered test preparation studio. Practice under authentic exam conditions with instant, rubric-backed AI scoring for IELTS, SAT, TOEFL, and PTE.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary btn--lg" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener">
+            <span class="bp-chip" aria-hidden="true">
+              <img src="assets/brand/google.png" alt="" width="20" height="22">
+            </span>
+            Download IELTS Maestro on Google Play
           </a>
-          <p>An independent app studio building focused learning apps. Made for people who want to get better, faster.</p>
         </div>
-        <div class="footer-col">
-          <h5>Work</h5>
-          <ul>
-            <li><a href="ielts-prep/">IELTS Prep</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener">Get IELTS Prep on Google Play</a></li>
-            <li><a href="https://play.google.com/store/apps/dev?id=6638762057050596136" target="_blank" rel="noopener">Baseline Labs on Google Play</a></li>
-            <li><a href="#studio">The studio</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Company</h5>
-          <ul>
-            <li><a href="mailto:baselinelabs.io@gmail.com">Contact</a></li>
-            <li><a href="ielts-prep/privacy.html">Privacy Policy</a></li>
-            <li><a href="ielts-prep/terms.html">Terms of Service</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span data-year>2026</span> Baseline Labs. All rights reserved.</p>
-        <p><a href="mailto:baselinelabs.io@gmail.com">baselinelabs.io@gmail.com</a></p>
+        <p class="app-note" style="margin-top:1.5rem;justify-content:center;">
+          <span style="color:var(--secondary);letter-spacing:.08em;">★★★★★</span>
+          <span><strong style="color:var(--ink)">4.8/5</strong> · Trusted by 50,000+ ambitious test-takers worldwide</span>
+        </p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/js/main.js?v=13" defer></script>
+  <!-- ============ Featured App: IELTSMaestro (doc §3) ============ -->
+  <section class="showcase" id="apps" aria-labelledby="apps-title">
+    <div class="showcase-sticky">
+    <div class="showcase-panel">
+      <div class="showcase-inner">
+        <div class="showcase-body">
+          <div class="showcase-left">
+            <div class="showcase-brand">
+              <img class="app-icon" src="apps/ielts-maestro/app-icon.png" alt="" aria-hidden="true" width="82" height="82">
+              <span class="eyebrow eyebrow--dark">Featured Release</span>
+              <h2 id="apps-title"><span class="product-name">IELTS Maestro</span>: Prep Like a Pro, Your complete IELTS band-score coach in your pocket.</h2>
+              <p style="color:rgba(255,255,255,.72);margin-top:1rem;">Master Academic and General Training IELTS with precision AI scoring that pinpoints exact areas for improvement across every module.</p>
+            </div>
+
+            <div class="sc-list">
+              <div class="sc-item is-active" role="tabpanel"
+                data-shot="apps/ielts-maestro/app_screenshots_v2/band-analysis.jpg"
+                data-alt="IELTSMaestro full test analysis with an AI-scored overall band of 7.0"
+                data-caption="An overall band across all four skills">
+                <span class="sc-num">01 / 05</span>
+                <span class="sc-title">Instant AI Band Scores Across All 4 Skills</span>
+                <span class="sc-desc">Get immediate, accurate score estimates for Listening, Reading, Writing, and Speaking right after finishing a test.</span>
+              </div>
+
+              <div class="sc-item" role="tabpanel"
+                data-shot="apps/ielts-maestro/app_screenshots/Screenshot_2026-07-17-18-16-43-362_com.baselinelabs.ieltify.jpg"
+                data-alt="IELTSMaestro listening test in progress with a running clock and audio played once"
+                data-caption="Timed sections, audio played once">
+                <span class="sc-num">02 / 05</span>
+                <span class="sc-title">Real Exam Conditions (Zero Test-Day Surprises)</span>
+                <span class="sc-desc">Train under strict official constraints with running clocks, authentic answer sheets, and listening audio played only once.</span>
+              </div>
+
+              <div class="sc-item" role="tabpanel"
+                data-shot="apps/ielts-maestro/app_screenshots_v2/feedback.jpg"
+                data-alt="IELTSMaestro feedback showing strengths and fixes across the band criteria"
+                data-caption="Rubric-backed diagnostic feedback">
+                <span class="sc-num">03 / 05</span>
+                <span class="sc-title">Rubric-Backed Diagnostic Feedback</span>
+                <span class="sc-desc">Don't just see a score — understand why you earned it. Detailed AI breakdowns highlight grammar errors, vocabulary range, coherence, and task achievement for Speaking and Writing tasks.</span>
+              </div>
+
+              <div class="sc-item" role="tabpanel"
+                data-shot="apps/ielts-maestro/app_screenshots_v2/mock-tests.jpg"
+                data-alt="IELTSMaestro full mock tests library with available tests and recent results"
+                data-caption="New timed tests added regularly">
+                <span class="sc-num">04 / 05</span>
+                <span class="sc-title">Dynamic Practice Library</span>
+                <span class="sc-desc">Access a constantly updated bank of full-length mock tests graded from foundational to advanced difficulty.</span>
+              </div>
+
+              <div class="sc-item" role="tabpanel"
+                data-shot="apps/ielts-maestro/app_screenshots_v2/home-dashboard.jpg"
+                data-alt="IELTSMaestro dashboard showing current band, target band and per-skill progress"
+                data-caption="Your band today vs. your target">
+                <span class="sc-num">05 / 05</span>
+                <span class="sc-title">Goal-Tracking &amp; Score Projection</span>
+                <span class="sc-desc">Set your required band score (e.g., Band 7.5+) and monitor your progress trends module by module as you practice.</span>
+              </div>
+            </div>
+
+            <div class="sc-dots" role="tablist" aria-label="IELTSMaestro features">
+              <button class="sc-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Instant AI Band Scores"></button>
+              <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Real Exam Conditions"></button>
+              <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Rubric-Backed Diagnostic Feedback"></button>
+              <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Dynamic Practice Library"></button>
+              <button class="sc-dot" type="button" role="tab" aria-selected="false" aria-label="Goal-Tracking &amp; Score Projection"></button>
+            </div>
+
+            <div class="showcase-cta">
+              <a class="btn-play btn-play--light" href="https://play.google.com/store/apps/details?id=com.baselinelabs.ieltify" target="_blank" rel="noopener" aria-label="Get IELTS Maestro: Prep Like a Pro on Google Play">
+                <img class="bp-icon" src="images/google-play.png" alt="" aria-hidden="true" width="24" height="24">
+                <span class="bp-lines"><span class="bp-small">Get it on</span><span class="bp-big">Google Play</span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="sc-media">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="apps/ielts-maestro/app_screenshots_v2/band-analysis.jpg" alt="IELTSMaestro full test analysis with an AI-scored overall band of 7.0" width="1080" height="2400">
+              </div>
+            </div>
+            <p class="sc-caption">An overall band across all four skills</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============ Why PrepMaestro (doc §4) ============ -->
+  <section class="section" id="why">
+    <div class="shell">
+      <div class="why-split reveal">
+        <div class="why-copy">
+          <span class="eyebrow">Why PrepMaestro</span>
+          <h2>Built for learners who <span class="underline-accent">demand results</span>.</h2>
+          <p class="why-lead">
+            Four principles that separate PrepMaestro from legacy course platforms and gamified study apps.
+          </p>
+        </div>
+
+        <div class="why-stats reveal-stagger" aria-label="Four principles">
+          <div class="why-stat">
+            <span class="why-stat-icon" style="background:var(--listening)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            </span>
+            <h4>Authentic Test Engine</h4>
+            <p>No artificial questions or simplified formats. Practice in conditions that mirror test day 1:1.</p>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-icon" style="background:var(--speaking)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </span>
+            <h4>Coaching Over Grading</h4>
+            <p>Actionable guidance showing you the exact sentence structures and vocabulary needed to step up to the next band level.</p>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-icon" style="background:var(--reading)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h4>Distraction-Free Practice</h4>
+            <p>Clean, calm mobile UI engineered for deep focus and effective study sessions.</p>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-icon" style="background:var(--writing)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M4 7h16"/><path d="m7 7-3.5 6.5a3.5 3.5 0 0 0 7 0z"/><path d="m17 7-3.5 6.5a3.5 3.5 0 0 0 7 0z"/></svg>
+            </span>
+            <h4>Transparent &amp; Fair</h4>
+            <p>Generous free trial access with clear pricing, no hidden paywalls or surprise fees.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Coming Soon Ecosystem (doc §5) ============ -->
+  <section class="section" id="coming-soon" style="background:var(--mist);border-block:1px solid var(--line);">
+    <div class="shell">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">Expanding Platform</span>
+        <h2>Specialized <span class="underline-accent">test prep apps</span> in development.</h2>
+        <p>We are expanding the PrepMaestro suite to support more global exams with the same high-precision AI engine and authentic simulation.</p>
+      </div>
+
+      <div class="apps-grid reveal-stagger reveal-pop">
+        <article class="app-card app-card--sat">
+          <div class="app-monogram" aria-hidden="true"><span>SAT</span></div>
+          <div class="app-body">
+            <h3>SATMaestro</h3>
+            <p>Digital SAT · Math &amp; Digital Reading/Writing</p>
+            <span class="app-status"><span class="app-status-dot"></span>In Closed Beta</span>
+          </div>
+        </article>
+
+        <article class="app-card app-card--toefl">
+          <div class="app-monogram" aria-hidden="true"><span>TOEFL</span></div>
+          <div class="app-body">
+            <h3>TOEFLMaestro</h3>
+            <p>TOEFL iBT · Integrated Speaking &amp; Writing</p>
+            <span class="app-status"><span class="app-status-dot"></span>In Development</span>
+          </div>
+        </article>
+
+        <article class="app-card app-card--gre">
+          <div class="app-monogram" aria-hidden="true"><span>GRE</span></div>
+          <div class="app-body">
+            <h3>GREMaestro</h3>
+            <p>GRE General Test · Analytical Writing &amp; Quant</p>
+            <span class="app-status"><span class="app-status-dot"></span>Scheduled</span>
+          </div>
+        </article>
+
+        <article class="app-card app-card--pte">
+          <div class="app-monogram" aria-hidden="true"><span>PTE</span></div>
+          <div class="app-body">
+            <h3>PTEMaestro</h3>
+            <p>PTE Academic · Speaking, Writing, Reading &amp; Listening</p>
+            <span class="app-status"><span class="app-status-dot"></span>Coming Soon</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="waitlist" role="region" aria-labelledby="waitlist-title">
+        <div>
+          <h3 id="waitlist-title">Preparing for an upcoming exam?</h3>
+          <p>Join our early-access list to get notified when new test modules launch.</p>
+        </div>
+        <form class="waitlist-form" id="waitlist-form" novalidate>
+          <label for="waitlist-email" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Email address</label>
+          <input id="waitlist-email" type="email" name="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn--dark">Join Early Access</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (doc §2 AIEO) ============ -->
+  <section class="section" id="faq">
+    <div class="shell">
+      <div class="faq-split reveal">
+        <aside class="faq-aside">
+          <h2>Frequently asked<br>questions.</h2>
+          <p class="faq-aside-hint">Something we missed?</p>
+          <a href="mailto:support@prepmaestro.com" class="faq-aside-link">support@prepmaestro.com <span aria-hidden="true">→</span></a>
+        </aside>
+
+        <div class="faq reveal-stagger">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              How accurate is the AI scoring in IELTSMaestro?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              IELTSMaestro's AI engine is calibrated against thousands of officially graded IELTS Writing and Speaking samples. It evaluates responses across Task Achievement, Coherence &amp; Cohesion, Lexical Resource, and Grammatical Range &amp; Accuracy to provide band scores within a 0.5 margin of official examiners.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Can I use IELTSMaestro for both Academic and General Training?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              Yes, IELTSMaestro includes full-length practice tests, writing prompts, and reading passages tailored for both IELTS Academic and IELTS General Training modules.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              Does the app offer timed practice tests?
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              Yes, all full-length mock tests and individual skill modules run on official test-day timers to build time-management skills under real exam pressure.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer (doc §6) -->
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="PrepMaestro home">
+          <span class="brand-fallback">PrepMaestro</span>
+        </a>
+        <p>PrepMaestro — Mobile-first test preparation engineered for focus, accuracy, and score growth.</p>
+        <p class="disclaimer" style="margin-top:1rem;color:rgba(255,255,255,.5);font-size:.78rem;line-height:1.55;max-width:36rem;">
+          PrepMaestro and IELTSMaestro are independent study and practice tools. They are not affiliated with, endorsed by, or connected to IELTS, the British Council, IDP: IELTS Australia, Cambridge Assessment English, College Board (SAT), ETS (TOEFL/GRE), or any other test owner. All trademarks are the property of their respective owners.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="/apps/ielts-maestro/">IELTSMaestro</a></li>
+          <li><a href="#coming-soon">SATMaestro (Beta)</a></li>
+          <li><a href="#coming-soon">TOEFLMaestro (In Development)</a></li>
+          <li><a href="#coming-soon">GREMaestro (Scheduled)</a></li>
+          <li><a href="#coming-soon">PTEMaestro (Coming Soon)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">About Us</a></li>
+          <li><a href="/apps/ielts-maestro/privacy.html">Privacy Policy</a></li>
+          <li><a href="/apps/ielts-maestro/terms.html">Terms of Service</a></li>
+          <li><a href="mailto:support@prepmaestro.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> PrepMaestro. All rights reserved.</p>
+      <p><a href="mailto:support@prepmaestro.com">support@prepmaestro.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=27" defer></script>
 </body>
 </html>

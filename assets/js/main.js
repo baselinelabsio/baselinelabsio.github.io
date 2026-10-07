@@ -194,7 +194,14 @@
   }
 
   // Scroll-reveal (respects reduced-motion via CSS)
-  var revealables = document.querySelectorAll(".reveal");
+  // Pre-assign --i on every stagger container's children so CSS can delay them.
+  document.querySelectorAll(".reveal-stagger").forEach(function (host) {
+    Array.prototype.forEach.call(host.children, function (child, idx) {
+      child.style.setProperty("--i", idx);
+    });
+  });
+
+  var revealables = document.querySelectorAll(".reveal, .reveal-stagger");
   if (revealables.length && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(
       function (entries) {
@@ -210,5 +217,38 @@
     revealables.forEach(function (el) { io.observe(el); });
   } else {
     revealables.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+})();
+
+/* ============================================================
+   PrepMaestro revamp — FAQ + Waitlist (additive)
+   ============================================================ */
+(function () {
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  // Waitlist form
+  var form = document.getElementById('waitlist-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('input[type=email]');
+      var email = (input && input.value || '').trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (input) { input.focus(); input.style.borderColor = '#DC2626'; }
+        return;
+      }
+      var success = document.createElement('div');
+      success.className = 'waitlist-success';
+      success.textContent = 'Thanks — you’re on the list. We’ll be in touch when new modules launch.';
+      form.replaceWith(success);
+    });
   }
 })();

@@ -1,2 +1,16 @@
 # Local / generated runtime config (written by CI from env)
 ieltify/request-account-deletion/config.js
+
+# Local backup of pre-rebrand files — never deploy
+.backup-original/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local scratchpad / build dirs
+.playwright-mcp/
