@@ -1208,6 +1208,42 @@ body[data-brand="ielts"] .hero {
   align-items: center;
 }
 body[data-brand="ielts"] .hero > .shell { width: 100%; }
+
+/* Brand lockup — app icon + name + tagline (above the H1) */
+.app-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: .9rem;
+  margin-bottom: 1.1rem;
+}
+.app-lockup-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(15,23,42,.08);
+  flex: none;
+}
+.app-lockup-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.app-lockup-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--ink);
+  letter-spacing: -.015em;
+}
+.app-lockup-tag {
+  margin-top: .15rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+@media (max-width: 980px) {
+  .app-lockup { justify-content: center; margin-inline: auto; }
+}
 .app-hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   margin-top: 1.1rem;
