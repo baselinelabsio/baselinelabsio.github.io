@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css?v=34">
+  <link rel="stylesheet" href="assets/css/main.css?v=42">
 
   <script type="application/ld+json">
   {
@@ -68,7 +68,7 @@
 <header class="site-header">
   <div class="shell nav">
     <a class="brand" href="/" aria-label="PrepMaestro home">
-      <span class="brand-fallback">PrepMaestro</span>
+      <img src="assets/brand/prepmaestro-lockup.svg" alt="PrepMaestro" class="brand-lockup">
     </a>
 
     <nav aria-label="Primary">
@@ -81,7 +81,7 @@
     </nav>
 
     <div class="nav-cta">
-      <a class="btn btn--primary btn--sm" href="/apps/ielts-maestro/">Start Free Mock Test</a>
+      <a class="btn btn--primary btn--sm" href="/apps/ielts-maestro/">Explore IELTS Maestro</a>
       <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
     </div>
   </div>
@@ -163,10 +163,16 @@
         <div class="showcase-body">
           <div class="showcase-left">
             <div class="showcase-brand">
-              <img class="app-icon" src="apps/ielts-maestro/app-icon.png" alt="" aria-hidden="true" width="82" height="82">
+              <div class="showcase-lockup">
+                <img class="app-icon" src="apps/ielts-maestro/app-icon.svg" alt="" aria-hidden="true" width="82" height="82">
+                <div class="showcase-lockup-text">
+                  <span class="showcase-lockup-name">IELTS Maestro</span>
+                  <span class="showcase-lockup-tag">Prep Like a Pro</span>
+                </div>
+              </div>
               <span class="eyebrow eyebrow--dark">Featured Release</span>
-              <h2 id="apps-title"><span class="product-name">IELTS Maestro</span>: Prep Like a Pro, Your complete IELTS band-score coach in your pocket.</h2>
-              <p style="color:rgba(255,255,255,.72);margin-top:1rem;">Master Academic and General Training IELTS with precision AI scoring that pinpoints exact areas for improvement across every module.</p>
+              <h2 id="apps-title">Your complete IELTS band-score coach in your pocket.</h2>
+              <p style="color:var(--muted);margin-top:1rem;">Master Academic and General Training IELTS with precision AI scoring that pinpoints exact areas for improvement across every module.</p>
             </div>
 
             <div class="sc-list">
@@ -339,17 +345,6 @@
         </article>
       </div>
 
-      <div class="waitlist" role="region" aria-labelledby="waitlist-title">
-        <div>
-          <h3 id="waitlist-title">Preparing for an upcoming exam?</h3>
-          <p>Join our early-access list to get notified when new test modules launch.</p>
-        </div>
-        <form class="waitlist-form" id="waitlist-form" novalidate>
-          <label for="waitlist-email" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Email address</label>
-          <input id="waitlist-email" type="email" name="email" placeholder="Enter your email address" required>
-          <button type="submit" class="btn btn--dark">Join Early Access</button>
-        </form>
-      </div>
     </div>
   </section>
 
