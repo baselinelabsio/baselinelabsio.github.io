@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Request Account Deletion | IELTS Prep</title>
+    <title>Request Account Deletion | IELTS Maestro</title>
     <meta
       name="description"
-      content="Submit an account deletion request for IELTS Prep: AI Band Score and provide the information needed to process it securely."
+      content="Submit an account deletion request for IELTS Maestro and provide the information needed to process it securely."
     />
-    <link rel="stylesheet" href="../../assets/css/site.css" />
+    <link rel="icon" href="../app-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../../assets/css/site.css" />
     <style>
       body {
         background: linear-gradient(180deg, #f7f8fb 0%, #eef2ff 100%);
       }
 
       .form-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
+        background: var(--surface, #fff);
+        border: 1px solid var(--border, #E2E8F0);
+        border-radius: var(--radius, 14px);
+        box-shadow: var(--shadow, 0 4px 20px rgba(16, 65, 93, .06));
         padding: 1.5rem;
         max-width: 720px;
         margin: 0 auto;
@@ -35,7 +36,7 @@
       select {
         width: 100%;
         padding: 0.8rem 0.9rem;
-        border: 1px solid var(--border);
+        border: 1px solid var(--border, #E2E8F0);
         border-radius: 8px;
         font: inherit;
         margin-bottom: 1rem;
@@ -47,7 +48,7 @@
       }
 
       .helper-text {
-        color: var(--muted);
+        color: var(--muted, #526B7E);
         font-size: 0.95rem;
         margin-bottom: 1rem;
       }
@@ -77,32 +78,34 @@
   <body>
     <header class="site-header">
       <div class="site-header-inner">
-        <a class="brand" href="../../">Baseline Labs</a>
+        <a class="brand" href="../" aria-label="IELTS Maestro home">
+          <img src="../../../assets/brand/ieltsmaestro-lockup.svg" alt="IELTS Maestro" style="height:40px;width:auto;display:block">
+        </a>
       </div>
     </header>
 
     <main class="page-wrap">
-      <p class="breadcrumb"><a href="../../">Baseline Labs</a> / <a href="../">IELTS Prep</a> / Request account deletion</p>
+      <p class="breadcrumb"><a href="/">PrepMaestro</a> / <a href="../">IELTS Maestro</a> / Request account deletion</p>
 
       <section class="form-card">
         <h1>Request account deletion</h1>
         <p class="helper-text">
-          This page is the official Baseline Labs account deletion request link for IELTS Prep: AI Band Score. It is intended for users who want us to remove their account and associated personal data.
+          This is the official IELTS Maestro account deletion request page. It is intended for users who want us to remove their IELTS Maestro account and associated personal data. For general privacy details, see the <a href="../privacy.html">IELTS Maestro Privacy Policy</a>.
         </p>
 
         <div class="panel" style="margin-bottom: 1.5rem;">
           <h2>What will be deleted</h2>
-          <ul style="margin: 0 0 1rem 1.25rem; color: var(--muted);">
-            <li>Your IELTS Prep account record.</li>
+          <ul style="margin: 0 0 1rem 1.25rem; color: var(--muted, #526B7E);">
+            <li>Your IELTS Maestro account record.</li>
             <li>Personal profile data, including name and email.</li>
             <li>Any saved test progress, speaking/writing submissions, and recommendations tied to your account.</li>
           </ul>
           <h2>What may be retained</h2>
-          <ul style="margin: 0 0 0 1.25rem; color: var(--muted);">
+          <ul style="margin: 0 0 0 1.25rem; color: var(--muted, #526B7E);">
             <li>Aggregated anonymous analytics used for app improvement.</li>
             <li>Legal or security records if required by law.</li>
           </ul>
-          <p style="margin: 0; color: var(--muted);">Retention periods may vary depending on legal and security obligations. We will notify you if additional verification is required.</p>
+          <p style="margin: 0; color: var(--muted, #526B7E);">Retention periods may vary depending on legal and security obligations. We will notify you if additional verification is required.</p>
         </div>
 
         <form id="deletion-form">
@@ -128,16 +131,24 @@
         </form>
 
         <div id="statusBox" class="status-box" role="status" aria-live="polite"></div>
+
+        <p class="helper-text" style="margin-top:1.5rem;">
+          Prefer email? Send your request to <a href="mailto:support@prepmaestro.com">support@prepmaestro.com</a> and include the name and email tied to your IELTS Maestro account.
+        </p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="site-footer-inner">
-        <p>&copy; <span id="year"></span> Baseline Labs. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> PrepMaestro. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="config.js"></script>
     <script src="app.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

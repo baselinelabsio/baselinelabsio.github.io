@@ -73,6 +73,13 @@ body[data-brand="ielts"] {
   --grad: linear-gradient(135deg, #F02842 0%, #E31837 100%);
   --grad-soft: linear-gradient(135deg, #FDE8EC 0%, #F8FAFC 100%);
   --ring: 0 0 0 4px color-mix(in srgb, var(--primary) 22%, transparent);
+  /* Re-declare the legacy aliases so they resolve against this scope's --primary */
+  --emerald: #E31837;
+  --emerald-light: #B41128;
+  --emerald-wash: #FDE8EC;
+  /* Keep --writing (used by module cards + feature decor) crimson too */
+  --writing: #E31837;
+  --speaking: #E31837;
 }
 
 * { box-sizing: border-box; }
@@ -325,8 +332,10 @@ p { margin: 0; }
 
 .brand { display: inline-flex; align-items: center; gap: .6rem; }
 .brand img { height: 30px; width: auto; }
-.brand-lockup { height: 38px !important; width: auto; display: block; }
-.footer-brand .brand-lockup { height: 44px !important; }
+.brand-lockup { height: 54px !important; width: auto; display: block; }
+.footer-brand .brand-lockup { height: 78px !important; }
+.footer-brand .brand { margin-bottom: .25rem; }
+.footer-brand p { margin-top: .6rem !important; }
 .brand-fallback {
   font-family: var(--font-display);
   font-weight: 800;
