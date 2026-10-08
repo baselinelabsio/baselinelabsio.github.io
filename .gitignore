@@ -1,5 +1,5 @@
 # Local / generated runtime config (written by CI from env)
-ieltify/request-account-deletion/config.js
+apps/ielts-maestro/request-account-deletion/config.js
 
 # Local backup of pre-rebrand files — never deploy
 .backup-original/
