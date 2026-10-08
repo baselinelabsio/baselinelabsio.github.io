@@ -49,7 +49,7 @@ jobs:
             'window.APP_CONFIG = {' \
             "  API_URL: '${API_URL}'," \
             '};' \
-            > ielts-prep/request-account-deletion/config.js
+            > apps/ielts-maestro/request-account-deletion/config.js
           echo "Wrote config.js from env"
 
       - name: Setup Pages
