@@ -1424,13 +1424,28 @@ body[data-brand="ielts"] .hero > .shell { width: 100%; }
   .app-hero .hero-actions { justify-content: center; }
   .app-note { justify-content: center; }
   .app-mark { justify-content: center; }
-  .app-hero-media { order: -1; }
   .app-hero .phone { max-width: 235px; }
   .feature-media .phone { max-width: 235px; }
 }
 
+/* On tablet, keep phone first for impact */
+@media (min-width: 641px) and (max-width: 980px) {
+  .app-hero-media { order: -1; }
+}
+
+/* On phone, text + CTA appear first so value prop lands above the fold */
+@media (max-width: 640px) {
+  .app-hero-media { order: 0; margin-top: 1.5rem; }
+  .app-hero .phone { max-width: 200px; }
+  .app-hero h1 { font-size: 1.85rem; line-height: 1.1; }
+  .app-hero .lead { font-size: 1rem; }
+  .app-lockup { gap: .7rem; margin-bottom: .5rem; }
+  .app-lockup-icon { width: 48px; height: 48px; }
+  .app-lockup-name { font-size: 1.2rem; }
+  .app-lockup-tag { font-size: .85rem; }
+}
+
 @media (max-width: 760px) {
-  .app-hero .phone { max-width: 205px; }
   .feature-media .phone { max-width: 205px; }
 }
 
