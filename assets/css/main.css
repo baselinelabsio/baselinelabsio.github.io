@@ -422,6 +422,14 @@ p { margin: 0; }
   .hero-actions { margin-top: 1.6rem; }
   /* Soften decorative icons on small screens so they don't crowd the type */
   .hero-decor .deco { opacity: .45; }
+  /* Shrink the oversized Download CTA on mobile */
+  .hero-actions .btn--lg {
+    padding: .78rem 1.1rem;
+    font-size: .92rem;
+    gap: .55rem;
+  }
+  .hero-actions .btn--lg .bp-chip { width: 24px; height: 24px; }
+  .hero-actions .btn--lg .bp-chip img { width: 16px; height: 18px; }
 }
 .hero-center .eyebrow { margin-bottom: 1.6rem; }
 
@@ -2335,14 +2343,6 @@ body[data-brand="ielts"] .cta-block::before {
   min-height: 100dvh;
   display: flex;
   align-items: center;
-}
-/* On mobile, don't force full viewport height — content hugs top naturally
-   and the page scrolls into the next section without a dead gap */
-@media (max-width: 640px) {
-  .hero--centered {
-    min-height: auto;
-    align-items: stretch;
-  }
 }
 .hero--centered::after {
   content: "";
