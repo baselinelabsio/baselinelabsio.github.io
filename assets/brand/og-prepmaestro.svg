@@ -1,0 +1,41 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#C59500"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#accent)"/>
+
+  <!-- PrepMaestro icon mark (centered + simplified) -->
+  <g transform="translate(90, 180)">
+    <!-- Eye circles with navy fills -->
+    <circle cx="60" cy="60" r="45" fill="#10415D"/>
+    <circle cx="150" cy="60" r="45" fill="#10415D"/>
+    <!-- Highlight dots -->
+    <ellipse cx="68" cy="48" rx="18" ry="14" fill="#FFFFFE" transform="rotate(42 68 48)"/>
+    <ellipse cx="142" cy="48" rx="18" ry="14" fill="#FFFFFE" transform="rotate(-42 142 48)"/>
+    <!-- Mustard ribbon elements -->
+    <path d="M -5 160 L 225 160 L 215 180 L 5 180 Z" fill="#C59500"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="90" y="400" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="56" font-weight="800" fill="#10415D" letter-spacing="-1.5">PrepMaestro</text>
+
+  <!-- Headline -->
+  <text x="90" y="470" font-family="Inter, Segoe UI, sans-serif" font-size="34" font-weight="700" fill="#10415D">Conduct Your Prep.</text>
+  <text x="90" y="515" font-family="Inter, Segoe UI, sans-serif" font-size="34" font-weight="700" fill="#C59500">Master Your Score.</text>
+
+  <!-- Subhead -->
+  <text x="90" y="565" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="400" fill="#526B7E">AI-powered exam practice · IELTS live · SAT · TOEFL · GRE · PTE coming</text>
+
+  <!-- Domain -->
+  <text x="90" y="605" font-family="Space Mono, Menlo, monospace" font-size="16" font-weight="700" fill="#C59500" letter-spacing="1">PREPMAESTRO.COM</text>
+</svg>

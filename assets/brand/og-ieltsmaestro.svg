@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#FDE8EC"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F02842"/>
+      <stop offset="100%" stop-color="#E31837"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#accent)"/>
+
+  <!-- IELTS Maestro icon mark (simplified) -->
+  <g transform="translate(90, 180)">
+    <circle cx="60" cy="60" r="45" fill="#10415D"/>
+    <circle cx="150" cy="60" r="45" fill="#10415D"/>
+    <ellipse cx="68" cy="48" rx="18" ry="14" fill="#FFFFFE" transform="rotate(42 68 48)"/>
+    <ellipse cx="142" cy="48" rx="18" ry="14" fill="#FFFFFE" transform="rotate(-42 142 48)"/>
+    <!-- Crimson ribbon elements -->
+    <path d="M -5 160 L 225 160 L 215 180 L 5 180 Z" fill="#E31837"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="90" y="400" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="56" font-weight="800" fill="#10415D" letter-spacing="-1.5">IELTS Maestro</text>
+
+  <!-- Eyebrow -->
+  <text x="90" y="432" font-family="Space Mono, Menlo, monospace" font-size="14" font-weight="700" fill="#E31837" letter-spacing="2">PREP LIKE A PRO</text>
+
+  <!-- Headline -->
+  <text x="90" y="490" font-family="Inter, Segoe UI, sans-serif" font-size="32" font-weight="700" fill="#10415D">Complete AI IELTS Band Score Coach</text>
+  <text x="90" y="530" font-family="Inter, Segoe UI, sans-serif" font-size="32" font-weight="700" fill="#E31837">in Your Pocket.</text>
+
+  <!-- Subhead -->
+  <text x="90" y="575" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="400" fill="#526B7E">Academic + General Training · Real-time AI scoring on 4 band descriptors</text>
+
+  <!-- Domain -->
+  <text x="90" y="610" font-family="Space Mono, Menlo, monospace" font-size="16" font-weight="700" fill="#E31837" letter-spacing="1">PREPMAESTRO.COM/APPS/IELTS-MAESTRO</text>
+</svg>

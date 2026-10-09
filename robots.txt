@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Don't crawl stale redirect pages from the old brand
+Disallow: /ieltify/
+Disallow: /.backup-original/
+
+Sitemap: https://prepmaestro.com/sitemap.xml
