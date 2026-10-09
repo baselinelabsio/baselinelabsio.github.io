@@ -2492,14 +2492,18 @@ body[data-brand="ielts"] .cta-block::before {
 }
 
 @media (max-width: 900px) {
-  .why-split { grid-template-columns: 1fr; }
-  .why-stats { margin-top: 1rem; }
+  .why-split { grid-template-columns: 1fr; gap: 1.75rem; }
+  .why-stats { margin-top: 0; }
   .why-stat { padding: 1.4rem 1.2rem; }
   .why-stat:nth-child(odd)  { padding-left: 1.2rem; }
   .why-stat:nth-child(even) { padding-right: 1.2rem; }
 }
 @media (max-width: 520px) {
   .why-stats { grid-template-columns: 1fr; }
-  .why-stat { border-left: 0 !important; padding: 1.2rem 0; }
+  .why-stat { border-left: 0 !important; padding: 1.3rem 0; }
+  .why-stat:nth-child(odd), .why-stat:nth-child(even) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .why-stat + .why-stat { border-top: 1px solid var(--line); }
 }
