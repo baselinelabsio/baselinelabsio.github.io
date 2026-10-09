@@ -990,6 +990,15 @@ p { margin: 0; }
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 2.5rem;
 }
+/* Collapse 3 cramped columns to a stacked layout on narrow viewports */
+@media (max-width: 760px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 460px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .footer-brand p { max-width: none; }
+}
 .footer-brand p { margin-top: 1rem; color: var(--muted); max-width: 22rem; font-size: .95rem; }
 .footer-col h5 {
   font-family: var(--font-display);
