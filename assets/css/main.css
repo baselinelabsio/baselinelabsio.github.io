@@ -1532,6 +1532,8 @@ body[data-brand="ielts"] .hero > .shell { width: 100%; }
 @media (max-width: 460px) {
   .skills-grid { grid-template-columns: 1fr; }
   .credit-grid { grid-template-columns: 1fr; }
+  /* Trial card: shrink padding so credit tiles use the full container width */
+  .trial { padding: 1.4rem 1.25rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
