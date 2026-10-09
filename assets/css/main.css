@@ -395,11 +395,31 @@ p { margin: 0; }
 .hero .shell { position: relative; z-index: 1; }
 
 /* Studio hero — centered, typographic, minimal chrome */
-.hero-center {
+.hero-center, .hero-centered {
   text-align: center;
   max-width: 52rem;
   margin-inline: auto;
   padding-block: clamp(4rem, 9vw, 7rem) clamp(3rem, 6vw, 5rem);
+}
+
+/* Mobile pixel-tightening for the hero */
+@media (max-width: 640px) {
+  .hero-center, .hero-centered {
+    padding-block: 2.4rem 2.4rem;
+  }
+  .hero h1 {
+    font-size: 1.95rem;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+  }
+  .hero .lead {
+    font-size: 1.02rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+  .hero-actions { margin-top: 1.6rem; }
+  /* Soften decorative icons on small screens so they don't crowd the type */
+  .hero-decor .deco { opacity: .45; }
 }
 .hero-center .eyebrow { margin-bottom: 1.6rem; }
 
@@ -1299,6 +1319,43 @@ body[data-brand="ielts"] .hero > .shell { width: 100%; }
 .app-note span { display: inline-flex; align-items: center; gap: .4rem; }
 /* same note on a dark surface */
 .app-note--dark { color: rgba(255, 255, 255, .78); margin-top: 1.3rem; }
+
+/* Hero trust row — stars + rating + caption with controlled wrapping */
+.hero-trust-row {
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: .4rem .9rem;
+  text-align: center;
+  line-height: 1.4;
+}
+.hero-trust-row .trust-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.hero-trust-row .trust-stars {
+  color: var(--secondary);
+  letter-spacing: .08em;
+  font-size: .95rem;
+}
+.hero-trust-row .trust-rating strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.hero-trust-row .trust-caption {
+  color: var(--faint);
+}
+.hero-trust-row .trust-caption::before {
+  content: "·";
+  margin-right: .5rem;
+  color: var(--faint);
+}
+
+/* On mobile, drop the "·" separator and stack rating above caption */
+@media (max-width: 640px) {
+  .hero-trust-row { flex-direction: column; gap: .35rem; }
+  .hero-trust-row .trust-caption::before { content: none; }
+}
 
 /* app identity lockup */
 .app-mark {
