@@ -85,6 +85,8 @@ body[data-brand="ielts"] {
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+/* Backstop against stray horizontal overflow (floating decor, oversized SVGs, etc.) */
+html, body { overflow-x: clip; max-width: 100vw; }
 
 body {
   margin: 0;
@@ -2333,6 +2335,14 @@ body[data-brand="ielts"] .cta-block::before {
   min-height: 100dvh;
   display: flex;
   align-items: center;
+}
+/* On mobile, don't force full viewport height — content hugs top naturally
+   and the page scrolls into the next section without a dead gap */
+@media (max-width: 640px) {
+  .hero--centered {
+    min-height: auto;
+    align-items: stretch;
+  }
 }
 .hero--centered::after {
   content: "";
