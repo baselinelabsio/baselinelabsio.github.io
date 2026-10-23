@@ -355,6 +355,11 @@
   border: 0;
   display: block;
 }
+.blog-sidebar-share {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+}
 .blog-sidebar-share h4 {
   font-family: var(--font-mono);
   font-size: .68rem;
@@ -362,10 +367,11 @@
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--faint);
-  margin: 0 0 .4rem;
-  padding-bottom: .75rem;
-  border-bottom: 2px solid var(--primary);
-  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+  flex: 0 0 auto;
 }
 .blog-sidebar-toc ol {
   list-style: none;
