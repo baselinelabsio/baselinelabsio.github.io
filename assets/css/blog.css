@@ -190,10 +190,10 @@
   text-transform: uppercase;
   margin-bottom: 1.4rem;
 }
-.blog-category-pill--ai       { background: #FEF3C7; color: var(--cat-ai); }
-.blog-category-pill--skill    { background: #FDE8EC; color: var(--cat-skill); }
-.blog-category-pill--strategy { background: #DBEAFE; color: var(--cat-strategy); }
-.blog-category-pill--uni      { background: #EDE9FE; color: var(--cat-uni); }
+.blog-category-pill--ai       { background: #FDE8EC; color: #E31837; }
+.blog-category-pill--skill    { background: #FDE8EC; color: #E31837; }
+.blog-category-pill--strategy { background: #FDE8EC; color: #E31837; }
+.blog-category-pill--uni      { background: #FDE8EC; color: #E31837; }
 
 .blog-hero h1 {
   font-family: var(--font-display);
