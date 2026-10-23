@@ -112,10 +112,14 @@
   color: color-mix(in srgb, var(--primary) 80%, var(--ink));
   overflow: hidden;
 }
-.blog-card--ai .blog-card-thumb       { background: linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 100%); color: var(--cat-ai); }
-.blog-card--skill .blog-card-thumb    { background: linear-gradient(135deg, #FDE8EC 0%, #FFF7F9 100%); color: var(--cat-skill); }
-.blog-card--strategy .blog-card-thumb { background: linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%); color: var(--cat-strategy); }
-.blog-card--uni .blog-card-thumb      { background: linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 100%); color: var(--cat-uni); }
+/* Unified IELTS Maestro red theme for all cards */
+.blog-card--ai .blog-card-thumb,
+.blog-card--skill .blog-card-thumb,
+.blog-card--strategy .blog-card-thumb,
+.blog-card--uni .blog-card-thumb {
+  background: linear-gradient(135deg, #FDE8EC 0%, #FFF7F9 100%);
+  color: #E31837;
+}
 .blog-card-thumb svg { width: 56px; height: 56px; opacity: .9; }
 
 .blog-card-body {
@@ -135,10 +139,11 @@
   letter-spacing: .14em;
   text-transform: uppercase;
 }
-.blog-card--ai       .blog-card-category { color: var(--cat-ai); }
-.blog-card--skill    .blog-card-category { color: var(--cat-skill); }
-.blog-card--strategy .blog-card-category { color: var(--cat-strategy); }
-.blog-card--uni      .blog-card-category { color: var(--cat-uni); }
+/* Unified category label color */
+.blog-card--ai       .blog-card-category,
+.blog-card--skill    .blog-card-category,
+.blog-card--strategy .blog-card-category,
+.blog-card--uni      .blog-card-category { color: #E31837; }
 
 .blog-card h3 {
   font-family: var(--font-display);
