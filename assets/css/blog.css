@@ -503,7 +503,7 @@
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--card-accent, var(--faint));
+  color: var(--primary);
   display: block;
   margin-bottom: .55rem;
 }
@@ -512,12 +512,10 @@
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.35;
-  color: var(--primary);
+  color: var(--ink);
   margin: 0 0 1.1rem;
   flex: 1;
-  transition: color .15s ease;
 }
-.blog-related-card:hover h4 { color: var(--primary-dark); }
 .blog-related-card .read-more {
   display: inline-flex;
   align-items: center;
@@ -525,7 +523,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: .82rem;
-  color: var(--card-accent, var(--primary));
+  color: var(--ink);
   margin-top: auto;
 }
 .blog-related-card .read-more-arrow {
