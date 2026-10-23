@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" fill="none" aria-hidden="true">
+  <!-- Decorative dots -->
+  <circle cx="60" cy="55" r="4" fill="#7C3AED" opacity="0.5"/>
+  <circle cx="420" cy="60" r="3" fill="#7C3AED" opacity="0.6"/>
+  <circle cx="80" cy="220" r="3" fill="#7C3AED" opacity="0.5"/>
+  <circle cx="415" cy="215" r="5" fill="#7C3AED" opacity="0.4"/>
+
+  <!-- University building -->
+  <g transform="translate(170, 95)">
+    <!-- Base platform -->
+    <rect x="-10" y="140" width="160" height="10" rx="2" fill="#7C3AED" opacity="0.6"/>
+    <!-- Columns body -->
+    <rect x="0" y="60" width="140" height="80" fill="#7C3AED" opacity="0.14"/>
+    <rect x="0" y="60" width="140" height="80" stroke="#7C3AED" stroke-width="1.5" opacity="0.35"/>
+    <!-- Pediment / roof -->
+    <polygon points="-14,65 70,20 154,65" fill="#7C3AED" opacity="0.28"/>
+    <polygon points="-14,65 70,20 154,65" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/>
+    <!-- Columns -->
+    <rect x="12" y="75" width="12" height="65" fill="#7C3AED" opacity="0.6"/>
+    <rect x="40" y="75" width="12" height="65" fill="#7C3AED" opacity="0.6"/>
+    <rect x="88" y="75" width="12" height="65" fill="#7C3AED" opacity="0.6"/>
+    <rect x="116" y="75" width="12" height="65" fill="#7C3AED" opacity="0.6"/>
+    <!-- Door -->
+    <rect x="62" y="95" width="16" height="45" rx="8 8 0 0" fill="#7C3AED" opacity="0.7"/>
+  </g>
+
+  <!-- Graduation cap floating above -->
+  <g transform="translate(240, 70)">
+    <polygon points="-30,0 30,0 0,-16" fill="#7C3AED"/>
+    <rect x="-30" y="0" width="60" height="6" fill="#7C3AED" opacity="0.85"/>
+    <!-- Tassel -->
+    <path d="M 25 3 L 25 20 L 32 20" stroke="#7C3AED" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="32" cy="22" r="4" fill="#7C3AED"/>
+  </g>
+
+  <!-- Side decoration: globe outline -->
+  <g transform="translate(90, 135)" stroke="#7C3AED" stroke-width="2" fill="none" opacity="0.4">
+    <circle r="24"/>
+    <ellipse cx="0" cy="0" rx="12" ry="24"/>
+    <line x1="-24" y1="0" x2="24" y2="0"/>
+  </g>
+
+  <!-- Side decoration: document -->
+  <g transform="translate(380, 140)" opacity="0.45">
+    <rect x="-18" y="-22" width="36" height="44" rx="3" fill="none" stroke="#7C3AED" stroke-width="2"/>
+    <line x1="-10" y1="-10" x2="10" y2="-10" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-10" y1="10" x2="4" y2="10" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
