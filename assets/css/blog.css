@@ -182,6 +182,29 @@
 }
 .blog-hero .blog-shell { max-width: 1120px; }
 
+/* --- Breadcrumbs (HOME › BLOG › CATEGORY) --------------------------- */
+.blog-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.blog-breadcrumbs a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.blog-breadcrumbs a:hover { color: var(--primary); }
+.blog-breadcrumbs .sep { color: var(--faint); opacity: .55; }
+.blog-breadcrumbs .current { color: var(--ink); }
+
 .blog-category-pill {
   display: inline-flex;
   align-items: center;
