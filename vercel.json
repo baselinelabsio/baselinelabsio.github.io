@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/blog", "destination": "/apps/ielts-maestro/blog", "permanent": true },
+    { "source": "/blog/:slug*", "destination": "/apps/ielts-maestro/blog/:slug*", "permanent": true }
+  ]
 }
