@@ -335,8 +335,26 @@
   margin-top: 2px;
 }
 
-/* TOC in sidebar */
-.blog-sidebar-toc h4,
+/* TOC in sidebar — soft card, no numbers, no rail */
+.blog-sidebar-toc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.4rem 1.4rem 1.2rem;
+  box-shadow: 0 1px 2px rgba(16, 65, 93, .04), 0 8px 24px rgba(16, 65, 93, .04);
+}
+.blog-sidebar-toc h4 {
+  font-family: var(--font-display, var(--font-body));
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  text-transform: none;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  display: block;
+}
 .blog-sidebar-share h4 {
   font-family: var(--font-mono);
   font-size: .68rem;
@@ -349,60 +367,34 @@
   border-bottom: 2px solid var(--primary);
   display: inline-block;
 }
-.blog-sidebar-toc {
-  position: relative;
-}
 .blog-sidebar-toc ol {
   list-style: none;
-  margin: 1rem 0 0;
-  padding: 0 0 0 1.1rem;
-  counter-reset: tocitem;
-  position: relative;
-}
-/* Vertical rail */
-.blog-sidebar-toc ol::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 6px; bottom: 6px;
-  width: 2px;
-  background: color-mix(in srgb, var(--primary) 15%, var(--line));
-  border-radius: 2px;
+  margin: 0;
+  padding: 0;
 }
 .blog-sidebar-toc li {
-  counter-increment: tocitem;
-  position: relative;
-  padding: .5rem 0 .5rem .25rem;
+  padding: 0;
+  margin: 0;
+}
+.blog-sidebar-toc li + li {
+  margin-top: .9rem;
 }
 .blog-sidebar-toc a {
   display: block;
-  color: var(--muted);
+  color: var(--ink);
   font-family: var(--font-body);
-  font-size: .9rem;
+  font-size: .92rem;
   font-weight: 500;
   text-decoration: none;
-  line-height: 1.4;
+  line-height: 1.45;
   transition: color .15s ease;
 }
-/* Number badge in front of each item */
-.blog-sidebar-toc li::before {
-  content: counter(tocitem, decimal-leading-zero);
-  position: absolute;
-  left: -1.1rem;
-  top: .55rem;
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  font-weight: 700;
-  color: var(--faint);
-  background: var(--paper);
-  padding: 2px 0;
-  letter-spacing: 0;
-  line-height: 1;
-}
-.blog-sidebar-toc li:hover::before,
-.blog-sidebar-toc li:hover a {
+.blog-sidebar-toc a:hover,
+.blog-sidebar-toc li.is-active a,
+.blog-sidebar-toc a.is-active {
   color: var(--primary);
+  font-weight: 600;
 }
-.blog-sidebar-toc a:hover { color: var(--primary); }
 
 /* Share row in sidebar */
 .blog-share-row {
