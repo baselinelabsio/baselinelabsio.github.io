@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" fill="none" aria-hidden="true">
   <!-- Decorative dots -->
-  <circle cx="60" cy="55" r="4" fill="#C59500" opacity="0.5"/>
-  <circle cx="420" cy="60" r="3" fill="#C59500" opacity="0.6"/>
-  <circle cx="80" cy="220" r="3" fill="#C59500" opacity="0.5"/>
-  <circle cx="415" cy="215" r="5" fill="#C59500" opacity="0.4"/>
+  <circle cx="60" cy="55" r="4" fill="#E31837" opacity="0.5"/>
+  <circle cx="420" cy="60" r="3" fill="#E31837" opacity="0.6"/>
+  <circle cx="80" cy="220" r="3" fill="#E31837" opacity="0.5"/>
+  <circle cx="415" cy="215" r="5" fill="#E31837" opacity="0.4"/>
 
   <!-- Band score dial (left) -->
   <g transform="translate(140, 135)">
-    <circle r="78" stroke="#C59500" stroke-width="3" opacity="0.25"/>
-    <path d="M 0 -78 A 78 78 0 1 1 -78 0" stroke="#C59500" stroke-width="12" stroke-linecap="round"/>
-    <circle r="62" fill="#FFFBEB"/>
+    <circle r="78" stroke="#E31837" stroke-width="3" opacity="0.25"/>
+    <path d="M 0 -78 A 78 78 0 1 1 -78 0" stroke="#E31837" stroke-width="12" stroke-linecap="round"/>
+    <circle r="62" fill="#FFF7F9"/>
     <text y="6" text-anchor="middle" fill="#10415D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="40" font-weight="800" letter-spacing="-1">7.5</text>
-    <text y="28" text-anchor="middle" fill="#A07C00" font-family="'SF Mono', Menlo, monospace" font-size="10" font-weight="700" letter-spacing="2.5">AI SCORED</text>
+    <text y="28" text-anchor="middle" fill="#B41128" font-family="'SF Mono', Menlo, monospace" font-size="10" font-weight="700" letter-spacing="2.5">AI SCORED</text>
   </g>
 
   <!-- Rubric criteria bars (right) -->
   <g transform="translate(275, 70)">
-    <text y="-10" fill="#A07C00" font-family="'SF Mono', Menlo, monospace" font-size="10" font-weight="700" letter-spacing="2">RUBRIC</text>
+    <text y="-10" fill="#B41128" font-family="'SF Mono', Menlo, monospace" font-size="10" font-weight="700" letter-spacing="2">RUBRIC</text>
     <g transform="translate(0, 0)">
       <text y="12" fill="#10415D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="600" opacity="0.75">Task Response</text>
-      <rect y="18" width="140" height="8" fill="#C59500" opacity="0.18" rx="2"/>
-      <rect y="18" width="112" height="8" fill="#C59500" rx="2"/>
+      <rect y="18" width="140" height="8" fill="#E31837" opacity="0.18" rx="2"/>
+      <rect y="18" width="112" height="8" fill="#E31837" rx="2"/>
     </g>
     <g transform="translate(0, 36)">
       <text y="12" fill="#10415D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="600" opacity="0.75">Coherence</text>
-      <rect y="18" width="140" height="8" fill="#C59500" opacity="0.18" rx="2"/>
-      <rect y="18" width="98" height="8" fill="#C59500" rx="2"/>
+      <rect y="18" width="140" height="8" fill="#E31837" opacity="0.18" rx="2"/>
+      <rect y="18" width="98" height="8" fill="#E31837" rx="2"/>
     </g>
     <g transform="translate(0, 72)">
       <text y="12" fill="#10415D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="600" opacity="0.75">Lexical Resource</text>
-      <rect y="18" width="140" height="8" fill="#C59500" opacity="0.18" rx="2"/>
-      <rect y="18" width="126" height="8" fill="#C59500" rx="2"/>
+      <rect y="18" width="140" height="8" fill="#E31837" opacity="0.18" rx="2"/>
+      <rect y="18" width="126" height="8" fill="#E31837" rx="2"/>
     </g>
     <g transform="translate(0, 108)">
       <text y="12" fill="#10415D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="600" opacity="0.75">Grammar</text>
-      <rect y="18" width="140" height="8" fill="#C59500" opacity="0.18" rx="2"/>
-      <rect y="18" width="84" height="8" fill="#C59500" rx="2"/>
+      <rect y="18" width="140" height="8" fill="#E31837" opacity="0.18" rx="2"/>
+      <rect y="18" width="84" height="8" fill="#E31837" rx="2"/>
     </g>
   </g>
 </svg>

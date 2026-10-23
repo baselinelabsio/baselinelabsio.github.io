@@ -239,35 +239,19 @@
 .blog-hero h1,
 .blog-hero .blog-meta,
 .blog-category-pill { max-width: 820px; margin-left: auto; margin-right: auto; }
-/* Themed illustrations are layered over per-category gradient grounds */
-.blog-hero-image--ai {
-  background:
-    url("/apps/ielts-maestro/blog/_art/hero-ai.svg") center / 70% auto no-repeat,
-    radial-gradient(circle at 20% 30%, #FEF3C7 0%, transparent 55%),
-    radial-gradient(circle at 85% 70%, #FDE68A 0%, transparent 50%),
-    linear-gradient(135deg, #FFFBEB 0%, #FDE68A 100%);
-}
-.blog-hero-image--skill {
-  background:
-    url("/apps/ielts-maestro/blog/_art/hero-skill.svg") center / 72% auto no-repeat,
-    radial-gradient(circle at 25% 35%, #FDE8EC 0%, transparent 55%),
-    radial-gradient(circle at 80% 70%, #FBCFD6 0%, transparent 50%),
-    linear-gradient(135deg, #FFF7F9 0%, #FBCFD6 100%);
-}
-.blog-hero-image--strategy {
-  background:
-    url("/apps/ielts-maestro/blog/_art/hero-strategy.svg") center / 66% auto no-repeat,
-    radial-gradient(circle at 25% 35%, #DBEAFE 0%, transparent 55%),
-    radial-gradient(circle at 80% 70%, #BFDBFE 0%, transparent 50%),
-    linear-gradient(135deg, #EFF6FF 0%, #BFDBFE 100%);
-}
+/* Unified IELTS Maestro crimson theme — all categories share the same ground */
+.blog-hero-image--ai,
+.blog-hero-image--skill,
+.blog-hero-image--strategy,
 .blog-hero-image--uni {
-  background:
-    url("/apps/ielts-maestro/blog/_art/hero-uni.svg") center / 72% auto no-repeat,
-    radial-gradient(circle at 25% 35%, #EDE9FE 0%, transparent 55%),
-    radial-gradient(circle at 80% 70%, #DDD6FE 0%, transparent 50%),
-    linear-gradient(135deg, #F5F3FF 0%, #DDD6FE 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFF7F9;
 }
+.blog-hero-image--ai       { background-image: url("/apps/ielts-maestro/blog/_art/hero-ai.svg"),       radial-gradient(circle at 25% 35%, #FDE8EC 0%, transparent 55%), radial-gradient(circle at 80% 70%, #FBCFD6 0%, transparent 50%), linear-gradient(135deg, #FFF7F9 0%, #FBCFD6 100%); background-size: 70% auto, auto, auto, auto; }
+.blog-hero-image--skill    { background-image: url("/apps/ielts-maestro/blog/_art/hero-skill.svg"),    radial-gradient(circle at 25% 35%, #FDE8EC 0%, transparent 55%), radial-gradient(circle at 80% 70%, #FBCFD6 0%, transparent 50%), linear-gradient(135deg, #FFF7F9 0%, #FBCFD6 100%); background-size: 72% auto, auto, auto, auto; }
+.blog-hero-image--strategy { background-image: url("/apps/ielts-maestro/blog/_art/hero-strategy.svg"), radial-gradient(circle at 25% 35%, #FDE8EC 0%, transparent 55%), radial-gradient(circle at 80% 70%, #FBCFD6 0%, transparent 50%), linear-gradient(135deg, #FFF7F9 0%, #FBCFD6 100%); background-size: 66% auto, auto, auto, auto; }
+.blog-hero-image--uni      { background-image: url("/apps/ielts-maestro/blog/_art/hero-uni.svg"),      radial-gradient(circle at 25% 35%, #FDE8EC 0%, transparent 55%), radial-gradient(circle at 80% 70%, #FBCFD6 0%, transparent 50%), linear-gradient(135deg, #FFF7F9 0%, #FBCFD6 100%); background-size: 72% auto, auto, auto, auto; }
 
 /* ===================================================================
    BLOG POST BODY — 2-column grid (sidebar + content)
