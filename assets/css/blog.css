@@ -292,13 +292,17 @@
   color: var(--ink);
 }
 .blog-content li strong { color: var(--ink); font-weight: 700; }
-.blog-content a {
+.blog-content a:not(.btn) {
   color: var(--primary);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
-.blog-content a:hover { color: var(--primary-dark); }
+.blog-content a:not(.btn):hover { color: var(--primary-dark); }
+/* Buttons inside blog content keep their own styling */
+.blog-content .btn { text-decoration: none; }
+.blog-content .btn--primary { color: #fff; }
+.blog-content .btn--primary:hover { color: #fff; }
 .blog-content strong { color: var(--ink); }
 
 /* --- TOC ------------------------------------------------------------- */
